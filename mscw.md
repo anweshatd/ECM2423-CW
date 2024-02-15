@@ -1,6 +1,6 @@
 **Must Have**
 - User Profiles
-- Location (in some form whether that be a map or gps)
+- Location (in some form whether that be a map or gps) - get info about location (how it meets sustainability goals)
 - Safe storage of user information (Privacy policy & GDPR)
 - Challenges
 - Mobile web app interface
