@@ -16,6 +16,8 @@
 - Steps tracker for points
 - tree planting
 - Pokemon Go-style Augmented Reality
+- profile pictures
+- sound effects
 
 
 **Won't Have**
