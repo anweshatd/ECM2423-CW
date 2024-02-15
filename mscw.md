@@ -1,7 +1,7 @@
 **Must Have**
 - User Profiles
 - Location (in some form whether that be a map or gps)
-- Safe storage of user information (GDPR)
+- Safe storage of user information (Privacy policy & GDPR)
 - Challenges
 - Mobile web app interface
 - Desktop web app for game keeping (Django admin page)
