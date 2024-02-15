@@ -1,21 +1,23 @@
+Meeting 15/02/24
+
 Github set up
 
 •	trees?
 •	track ways you've travelled?
-o	badges for those?
+  o	badges for those?
 •	lists?
 •	daily missions?
 •	two types of challenge
-o	location based
-o	not location based
+  o	location based
+  o	not location based
 
 process
 •	set up Django
 •	create user profiles
-o	three different types of user profiles
+  o	three different types of user profiles
 •	list of challenges
 •	Location-based challenges
-o	Location required!
+  o	Location required!
 •	make the challenges – what type?
 •	Point system
 •	Leaderboard system
