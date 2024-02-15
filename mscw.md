@@ -8,16 +8,16 @@
 
 **Should Have**
 - Point system
-- Badges
 - Information resources
 
 **Could Have**
+- Leaderboard
+- Badges
 - Steps tracker for points
 - tree planting
 - Pokemon Go-style Augmented Reality
-- Leaderboard
+
 
 **Won't Have**
 - Desktop app
-- Storing payment information to get paid 
 
