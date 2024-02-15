@@ -1,0 +1,58 @@
+Github set up
+
+•	trees?
+•	track ways you've travelled?
+o	badges for those?
+•	lists?
+•	daily missions?
+•	two types of challenge
+o	location based
+o	not location based
+
+process
+•	set up Django
+•	create user profiles
+o	three different types of user profiles
+•	list of challenges
+•	Location-based challenges
+o	Location required!
+•	make the challenges – what type?
+•	Point system
+•	Leaderboard system
+•	info at locations?
+won't have
+•	Pokémon Go style AR thingy at locations
+
+Lucas seems kind of confident about making the challenges – "refer to Exeter's sustainability goals"
+
+Website planning
+•	Malik said he could make a mock-up of something
+•	Login page
+•	
+
+from spec: "a privacy policy and GDPR compliance are expected to be part of any apps that are released to the public." what? should we ask the guy? yeah we're asking the guy
+
+By first deadline – minimum working project, I think. Technically operable but can't do much
+
+Steps tracker for points
+
+from spec:
+"The player users will primarily be students and staff and expect to use the app through a browser on a mobile device."
+"The game keeper users will be expected to access the app through a desktop or laptop browser."
+
+gamekeeper stuff should be doable through built-in django admin page. probably.
+
+we are not storing bank info
+
+Lucas has managed to make it onto Exeter greenrewards, so should be able to figure out the challenges
+
+points of interest around campus? solar panels, pond, café etc.
+so the info thing – tell the user how the location meets the sustainability goals
+
+todo – how the website will look. Malik might look into that?
+
+Eliza and Anwesha very busy over the weekend
+Sophie doesn't mind creating the Django app and sorting out the Github
+Lucas will do some research into challenges/information because he has somewhat of a clue about it and possibly also the Django stuff because we should probably all know how to do that really
+Sophie will email the guy about the gdpr stuff and the website host
+Anwesha will maybe research the gdpr stuff? Or just. Stuff in general.
