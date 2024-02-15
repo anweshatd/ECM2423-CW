@@ -1,0 +1,23 @@
+**Must Have**
+- User Profiles
+- Location (in some form whether that be a map or gps)
+- Safe storage of user information (GDPR)
+- Challenges
+- Mobile web app interface
+- Desktop web app for game keeping (Django admin page)
+
+**Should Have**
+- Point system
+- Badges
+- Information resources
+
+**Could Have**
+- Steps tracker for points
+- tree planting
+- Pokemon Go-style Augmented Reality
+- Leaderboard
+
+**Won't Have**
+- Desktop app
+- Storing payment information to get paid 
+
