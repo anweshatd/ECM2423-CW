@@ -21,4 +21,5 @@
 **Won't Have**
 - Desktop app
 - Pokemon Go-style Augmented Reality
+- carbon footprint calculator
 
