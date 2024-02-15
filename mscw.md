@@ -15,11 +15,10 @@
 - Badges
 - Steps tracker for points
 - tree planting
-- Pokemon Go-style Augmented Reality
 - profile pictures
 - sound effects
 
-
 **Won't Have**
 - Desktop app
+- Pokemon Go-style Augmented Reality
 
