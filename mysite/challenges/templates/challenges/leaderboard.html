@@ -4,9 +4,18 @@
 
 {% block content %}
 
-{%for player in Players%}
-    <h3> User: {{player.user.username}}</h3>
-    <p> Points: {{player.points}} </p>
-{%endfor%}
+<h1>Leaderboard</h1>
 
+<table style="width:100%">
+    <tr>
+      <th>Username</th>
+      <th>Points</th>
+    </tr>
+{%for player in Players%}
+    <tr>
+      <td>{{player.user.username}}</td>
+      <td>{{player.points}}</td>
+    </tr>
+{%endfor%}
+</table>
 {% endblock %}

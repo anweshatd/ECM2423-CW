@@ -12,6 +12,6 @@ def challengesHome(request):
 
 def leaderboard(request):
     context = {
-        'Players': Player.objects.all().order_by(points.desc())
+        'Players': Player.objects.all().order_by('-points')
     }
     return render(request, "challenges/leaderboard.html", context)
