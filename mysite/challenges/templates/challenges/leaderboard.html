@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Leaderboard{% endblock %}
+
+{% block content %}
+
+{%for player in Players%}
+    <h3> User: {{player.user.username}}</h3>
+    <p> Points: {{player.points}} </p>
+{%endfor%}
+
+{% endblock %}
