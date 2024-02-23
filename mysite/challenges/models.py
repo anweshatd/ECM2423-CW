@@ -1,4 +1,5 @@
 from django.db import models
+from accounts.models import Player
 
 # Create your models here.
 class challenge(models.Model):
@@ -10,3 +11,9 @@ class challenge(models.Model):
     
     def __str__(self):
         return self.title
+
+
+class userschallenges(models.Model):
+    user = models.ForeignKey(Player, on_delete=models.CASCADE)
+    challenge = models.ForeignKey(challenge, on_delete=models.CASCADE)
+    date = models.DateField()
