@@ -1,5 +1,7 @@
 Meeting 15/02/24
 
+Present: Lucas, Anwesha, Eliza, Sophie, Malik 
+
 Github set up
 
 •	trees?
@@ -58,3 +60,84 @@ Sophie doesn't mind creating the Django app and sorting out the Github
 Lucas will do some research into challenges/information because he has somewhat of a clue about it and possibly also the Django stuff because we should probably all know how to do that really
 Sophie will email the guy about the gdpr stuff and the website host
 Anwesha will maybe research the gdpr stuff? Or just. Stuff in general.
+
+Meeting notes 19/2/24
+
+Present: Lucas, Anwesha, Eliza, Sophie, Malik
+Over the weekend:
+Sophie started the Django app and did some basic URL stuff
+Lucas came up with a few challenge tasks
+Anwesha googled gdpr
+Malik thought about how the app will look
+Anwesha has added Alex to the github
+
+Some people to work on front end and some to work on backend
+Anwesha and Malik volunteered for front end, Sophie for backend
+Backend – databases
+Link the num of points to the users
+We should sort out what actual pages there are – homepage etc.
+Local host – when you do manage.py runserver and everyone on the wifi can see it
+Eliza to work on user databases.
+We should get like a login screen. Sophie can do that
+12:30 for next Monday meeting
+1pm Thursday meeting, same time same place. And one on Saturday maybe? Anwesha's not free Tue, Malik's not free Wed
+We can communicate over the group chat between meetings
+Lucas to work on challenge databases
+Keep track of what challenges each user did – relational database.
+(No-one took databases module except Alex. Alex has been asked over the group chat to help with databases)
+Need to remember there will be different types of users
+Location based information has been volunteered to be handled from the front end – Anwesha and Malik
+
+Meeting notes 22/02/24
+
+Present: Alex, Lucas, Sophie, Eliza, Malik
+Anwesha can't make it due to being double-booked. Sent a message saying her Django wasn't working and she's still trying to figure it out.
+	
+teaching Alex how to use the github
+Sophie says you can now (theoretically) log in. 
+Alex and Lucas made the challenges database and made the backend of the challenge page. Admins can just add challenges now. The front end is currently very minimal, Malik will work on it.
+Malik and Eliza do not have significant progress reports due to other coursework.
+
+Malik can't make Saturday in-person, no-one else who's here seems to have anything on.
+
+Sophie suggested an individual challenge page as well as the list of challenges page that Alex and Lucas have already made. And the challenge page will have a submit button that will update the users-done-challenges database.
+Alex and Lucas sent the tutorial video on databases that they found in the chat
+
+Alex said we need to figure out what we need to get done by next week
+We have the users, kinda the challenges
+"You can add stuff to the database and it'll automatically populate whatever's in the database to the page" (in reference to the challenges)
+
+Location stuff? Nothing's happened on location stuff. Malik volunteered, maybe Anwesha should try too if she can get her Django working
+
+Login page does not account for different types of users. Should it? Most login pages have a button to say what you're trying to log in as.
+Update: no. If we have user type as a field in our user database you just need to log in and then it'll automatically know what type of user you are.
+Sophie to look at user database.
+
+Next meeting 1pm Saturday, same place (DH)
+
+User-challenge table – Eliza to look at. Which folder should it go in, Accounts or Challenges? Update: neither.
+A model is like a class for the entries in the database. If you create two different models, it has two different classes – so neither.
+Table has two foreign keys, referring to each of the primary keys. Add a date field for the day the challenge was completed. So like USERID, CHALLENGEID, date
+
+Lucas and Alex to work out location stuff instead of Malik.
+
+Sophie has come up with things for the user-challenge table as well as the user table for different types of users.
+
+Sophie says users can sign up
+We'll need button for users to submit challenges, some sort of front end stuff… location stuff should hopefully be done by Saturday
+
+Next Monday meeting has been booked, it is 12:30pm
+
+Sophie possibly working on the leaderboard?
+We're gonna need to test it at some point
+
+Sophie suggests Eliza maybe assist with front end, add headers and footers to everything so all the pages look the same? Video might help.
+
+Only check the user's location when they ask you to, so don't put it in the user database.
+
+So to do:
+•	Malik – working on the front end of the challenges page
+•	Sophie – working on the user database
+•	Lucas and Alex – location stuff
+•	Eliza and Anwesha – assist with front end
+
