@@ -1,0 +1,42 @@
+<html>
+
+{% extends "base.html" %}
+
+<head>
+    <meta charset="utf-8">
+    <title> {% block title %}Challenges{% endblock %} </title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+{% block content %}
+
+<body p-3 mb-2 bg-danger text-white>
+
+    {%for challenge in challenges%}
+    <div p-3 mb-2 bg-danger text-white>
+       <div class="container text-center">
+            <div class="row"> 
+              <div class="col-9">
+                <h1> Challenge: {{challenge.title}}</h1>
+                <p id="challenge-content"> {{challenge.content}} </p>
+              </div>
+            
+              <div class="col">
+                <div class="row">
+                    <p id="points"> Points: {{challenge.points}} </p>
+                    <p id="challenge-ctype"> Challenge Type: {{challenge.cType}} </p>
+                </div>
+              </div>
+            </div>
+    </div>
+    </div>
+    {%endfor%}
+
+    <div class="container">
+        {% endblock %}
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
