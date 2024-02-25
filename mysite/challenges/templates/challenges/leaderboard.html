@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Leaderboard{% endblock %}
+
+{% block content %}
+
+<h1>Leaderboard</h1>
+
+<table style="width:100%">
+    <tr>
+      <th>Username</th>
+      <th>Points</th>
+    </tr>
+{%for player in Players%}
+    <tr>
+      <td>{{player.user.username}}</td>
+      <td>{{player.points}}</td>
+    </tr>
+{%endfor%}
+</table>
+{% endblock %}

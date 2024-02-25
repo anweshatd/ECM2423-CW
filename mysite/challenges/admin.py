@@ -5,9 +5,13 @@ from django.contrib import admin
 
 # from django.contrib.gis.admin import OSMGeoAdmin
 from .models import challenge
+from accounts.models import Player
+from django.contrib.gis.admin import OSMGeoAdmin
 
-# @admin.register(challenge)
-# class ChallengeAdmin(OSMGeoAdmin):
-#     list_display = ('title', 'location')
 
-admin.site.register(challenge)
+#admin.site.register(challenge)
+admin.site.register(Player)
+
+@admin.register(challenge)
+class challengeAdmin(OSMGeoAdmin):
+    list_display = ('title', 'location')
