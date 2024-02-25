@@ -3,11 +3,16 @@ from accounts.models import Player
 
 # Create your models here.
 class challenge(models.Model):
+    TYPE_CHOICES = (
+        ('Location-Based', 'Location-Based'),
+        ('Non Location-Based', 'Non Location-Based'),
+    )
+
     title = models.CharField(max_length=1000)
     content = models.TextField()
     # location
     points = models.IntegerField()
-    cType = models.CharField(max_length=100)
+    cType = models.CharField(max_length=100, choices=TYPE_CHOICES)
     
     def __str__(self):
         return self.title
