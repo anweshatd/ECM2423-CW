@@ -11,45 +11,29 @@
 </head>
 {% block content %}
 
-<script> 
-
-  function verifyLocation() {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        
-        fetch('/challenges/', {
-          method: 'POST', // or 'PUT'
-          headers: {
-            'Content-Type': 'application/json',
-            
-          },
-          body: JSON.stringify({ 'latitude': latitude, 'longitude': longitude }),
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-          alert(data.message); // Show success or failure message
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-          alert('Error verifying location');
-        });
-      }, function(error) {
-        console.log("Error getting location: ", error);
-        alert('Error getting location');
-      });
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-      alert("Geolocation is not supported by this browser.");
-    }
-  }
-</script>
-
-
 
 <body p-3 mb-2 bg-danger text-white>
+  <div id="location"> <!-- needs to be before the javscript-->
+    
+  </div>
+
+  <script> // needs to be before the getlocation button
+    var x = document.getElementById("location");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+
+            navigator.geolocation.getCurrentPosition(showPosition);
+
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+    }
+
+  </script>
 
     {%for challenge in challenges%}
     <div p-3 mb-2 bg-danger text-white>
@@ -64,7 +48,7 @@
                 <div class="row">
                     <p id="points"> Points: {{challenge.points}} </p>
                     <p id="challenge-ctype"> Challenge Type: {{challenge.cType}} </p>
-                    <button type="button" onclick="verifyLocation()">Verify Location</button>
+                    <button type="button" onclick="getLocation()">Verify Location</button>
                     
                 </div>
               </div>
@@ -83,6 +67,9 @@
 
   </body>
 
+  <script>
+    
+  </script>
 
 </html>
 
