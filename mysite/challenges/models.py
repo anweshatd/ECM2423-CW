@@ -1,4 +1,5 @@
 from django.db import models
+
 from accounts.models import Player
 
 from django.contrib.gis.db import models
@@ -14,7 +15,9 @@ class challenge(models.Model):
     content = models.TextField()
     # location
     points = models.IntegerField()
+
     cType = models.CharField(max_length=100, choices=TYPE_CHOICES)
+
     location = models.PointField(blank=True, null=True)
     
     def __str__(self):
