@@ -11,6 +11,44 @@
 </head>
 {% block content %}
 
+<script> 
+
+  function verifyLocation() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        
+        fetch('/challenges/', {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+            
+          },
+          body: JSON.stringify({ 'latitude': latitude, 'longitude': longitude }),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+          alert(data.message); // Show success or failure message
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          alert('Error verifying location');
+        });
+      }, function(error) {
+        console.log("Error getting location: ", error);
+        alert('Error getting location');
+      });
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+</script>
+
+
+
 <body p-3 mb-2 bg-danger text-white>
 
     {%for challenge in challenges%}
@@ -26,6 +64,8 @@
                 <div class="row">
                     <p id="points"> Points: {{challenge.points}} </p>
                     <p id="challenge-ctype"> Challenge Type: {{challenge.cType}} </p>
+                    <button type="button" onclick="verifyLocation()">Verify Location</button>
+                    
                 </div>
               </div>
             </div>
@@ -38,5 +78,12 @@
        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+
+    
+
+  </body>
+
+
 </html>
+
+
