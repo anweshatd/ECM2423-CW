@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "challenges.apps.ChallengesConfig",
-    "accounts"
+    "accounts",
+    "django.contrib.gis",
 ]
 
 MIDDLEWARE = [
@@ -75,12 +76,27 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# Ensure database name, user and password are correctly set 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'groupsoft',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
+
+# Path would differ from person to person
+GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal308.dll" 
 
 
 # Password validation
