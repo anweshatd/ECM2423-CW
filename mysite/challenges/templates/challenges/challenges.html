@@ -1,5 +1,7 @@
 <html>
 
+{% extends "base.html" %}
+
 <head>
     <meta charset="utf-8">
     <title> {% block title %}Challenges{% endblock %} </title>
@@ -27,7 +29,7 @@
 <body class="p-3 mb-2 bg-light text-dark" >
 <ol>
     {%for challenge in challenges%}
-    <div class = "challenge_body">
+    <div p-3 mb-2 bg-danger text-white>
        <div class="container text-center">
             <div class="row"> 
               <div class="col-8">
@@ -50,7 +52,7 @@
     </ol>
 
     <div class="container">
-        {% block content %}{% endblock %}
+        {% endblock %}
        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
