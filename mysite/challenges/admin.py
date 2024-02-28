@@ -14,6 +14,8 @@ from django.contrib.gis.admin import GISModelAdmin
 admin.site.register(Player)
 admin.site.register(userschallenges)
 
+
 @admin.register(challenge)
+
 class challengeAdmin(GISModelAdmin):
     list_display = ('title', 'location')
