@@ -16,3 +16,4 @@ admin.site.register(userschallenges)
 
 @admin.register(challenge)
 class challengeAdmin(GISModelAdmin):
+    list_display = ('title', 'location')
