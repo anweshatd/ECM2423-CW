@@ -8,10 +8,29 @@
 {% block content %}
 {% if user.is_authenticated %}
 <body>
+    <div id="location"></div>
+    <script> // needs to be before the getlocation button
+        var x = document.getElementById("location");
+    
+        function getLocation() {
+            if (navigator.geolocation) {
+    
+                navigator.geolocation.getCurrentPosition(showPosition);
+    
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+        }
+    </script>
+         <!-- needs to be before the javscript-->
         <h1> Challenge: {{challenge.title}}</h1>
         <p> {{challenge.content}} </p>
         <p> Points: {{challenge.points}} </p>
         <p> Challenge Type: {{challenge.cType}} </p>
+        <button onclick="getLocation()">Verify Location</button>
 
         {% if not complete %}
         <form action="/challenges/{{challenge.id}}/" method="post">
