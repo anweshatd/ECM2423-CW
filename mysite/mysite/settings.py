@@ -100,6 +100,7 @@ DATABASES = {
 GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
 GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
 
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
