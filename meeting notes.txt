@@ -141,3 +141,60 @@ So to do:
 •	Lucas and Alex – location stuff
 •	Eliza and Anwesha – assist with front end
 
+24/02/24
+Present: Sophie, Anwesha, Alex, Lucas, Eliza (late)
+Alex and Lucas did a thing where you can put a point on the map as the location of a challenge and it'll put it in the database
+Sophie did the table of challenges and users and the leaderboard
+Malik probably did challenges front end
+
+Malik and Anwesha have divided up the front end
+
+Alex and Lucas planning to do user location verification for Monday – check if the user is within a certain range of the challenge
+Anwesha planning to work on the login and password
+
+Anwesha and Sophie trying to sort out Anwesha's tech problems
+
+Sophie or Eliza to do the users creating a challenge thing – working with the user-challenge table
+We still need to do the individual challenge page. Sophie or Eliza could work on that?
+
+Alex: Setting up an anaconda environment so as to test what we need to run the server. Changed it from SQLite to PostgreSQL (geographic). Seeing what dependencies we need.
+
+
+26/02/24
+What the person said
+When you submit your github make sure you don't have trailing branches
+If usernames not clear who's who on github, put it in the readme
+Make sure we have something more linked up by Monday – that's when the demo is.
+Need logging in, tasks come up, complete a task, scores go up. Leaderboard would be good. We need one of the challenges working by Monday, and the stuff linked up (pages link to one another) by Thursday.
+Have more of a 'playable' thing
+All info about the Thursday and Monday hand-in/presentation is on the assessment powerpoint
+We need to fill in individual peer review forms
+Link to github – make it open access
+Screenshots and an open link to your Kanban board
+Product document – what your product is about, what problem you're solving, who your users are.
+5-minute presentation, two minutes or so on powerpoint slides and the rest (longer!) on demo
+
+Rest of meeting
+
+Present: Anwesha, Eliza, Lucas, Sophie, Malik, Alex (late)
+
+Sophie's been working out some of the stuff for if you complete a challenge?
+Sophie seems to have come up with a challenge page. The user has the ability to create a challenge, though this particular development hasn't been merged yet.
+Lucas and Alex made it so you can get the user's location when asked. if they use html 5 browser. Still need to link it to the challenge location.
+Malik seems to be doing a bunch of front-end stuff
+
+We seem to have a bunch of working pages, Malik was showing them off
+We have a list of challenges
+	
+Meet this Wednesday 3:30, to prepare for the submission at noon on Thursday
+Next Monday presentation 2:30, meet at 1:30 to prepare
+
+Alex is concerned that it might not work on other people's computers if we merge the geodjango/postgreSQL stuff. We could always just run the demo on one of the computers it does work on.
+Maybe put the requirements in a readme file
+
+A lot of what Malik's done recently has been added to the main, as well as a lot of Anwesha's stuff, but not Sophie's
+
+Eliza to help Sophie?
+Sophie having problems committing/merging her branch. If successful with that, then Eliza could look at it.
+
+
