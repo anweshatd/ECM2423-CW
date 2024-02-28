@@ -197,4 +197,18 @@ A lot of what Malik's done recently has been added to the main, as well as a lot
 Eliza to help Sophie?
 Sophie having problems committing/merging her branch. If successful with that, then Eliza could look at it.
 
+28/02/24
+Present: Sophie, Lucas, Malik, Eliza, Anwesha
+Sophie added a passwordchange option
+The website's looking great. It's linked together and everything. Password change, leaderboard (with a fancy animation!), challenges, individual challenge page…
+Malik hasn't gotten geodjango to work
+Eliza suggested we should pick someone to submit it. Eliza ended up being the person.
+Eliza added a readme file to the github with the names of people
+Anwesha having tech issues also
+Our github is open access
+We found an example submission file
+Eliza is constructing the submission file. Sophie is working on the product documents.
+Eliza has emailed the lecturer about the product documents because they're confusing.
+
+
 
