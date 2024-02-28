@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> {% block title %}Challenges{% endblock %} </title>
+     <!-- bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <style>
+       body{
+           background-color: #487346;
+           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg %3E%3Cpolygon fill='%234c8e43' points='100 57.1 64 93.1 71.5 100.6 100 72.1'/%3E%3Cpolygon fill='%236aac5f' points='100 57.1 100 72.1 128.6 100.6 136.1 93.1'/%3E%3Cpolygon fill='%234c8e43' points='100 163.2 100 178.2 170.7 107.5 170.8 92.4'/%3E%3Cpolygon fill='%236aac5f' points='100 163.2 29.2 92.5 29.2 107.5 100 178.2'/%3E%3Cpath fill='%2389CC7C' d='M100 21.8L29.2 92.5l70.7 70.7l70.7-70.7L100 21.8z M100 127.9L64.6 92.5L100 57.1l35.4 35.4L100 127.9z'/%3E%3Cpolygon fill='%23768c3a' points='0 157.1 0 172.1 28.6 200.6 36.1 193.1'/%3E%3Cpolygon fill='%2396ac58' points='70.7 200 70.8 192.4 63.2 200'/%3E%3Cpolygon fill='%23B6CC76' points='27.8 200 63.2 200 70.7 192.5 0 121.8 0 157.2 35.3 192.5'/%3E%3Cpolygon fill='%2396ac58' points='200 157.1 164 193.1 171.5 200.6 200 172.1'/%3E%3Cpolygon fill='%23768c3a' points='136.7 200 129.2 192.5 129.2 200'/%3E%3Cpolygon fill='%23B6CC76' points='172.1 200 164.6 192.5 200 157.1 200 157.2 200 121.8 200 121.8 129.2 192.5 136.7 200'/%3E%3Cpolygon fill='%23768c3a' points='129.2 0 129.2 7.5 200 78.2 200 63.2 136.7 0'/%3E%3Cpolygon fill='%23B6CC76' points='200 27.8 200 27.9 172.1 0 136.7 0 200 63.2 200 63.2'/%3E%3Cpolygon fill='%2396ac58' points='63.2 0 0 63.2 0 78.2 70.7 7.5 70.7 0'/%3E%3Cpolygon fill='%23B6CC76' points='0 63.2 63.2 0 27.8 0 0 27.8'/%3E%3C/g%3E%3C/svg%3E");
+         }
+     .challenge_body{
+        background-color: green;
+        border-style: outset;
+        border-color:yellow;
+        border-radius: 10px;
+        box-shadow: 9px 10px;
+        margin:2%;
+        margin-left: 20%;
+        margin-right: 20%;
+     }
+ </style>
+ </head>
+ <h1 style="text-align:center;"> Challenge List</h1>
+ <body class="p-3 mb-2 bg-light text-dark" >
+    <div id="location"> <!-- needs to be before the javscript-->
+    
+  </div>
+
+  <script> // needs to be before the getlocation button
+    var x = document.getElementById("location");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+
+            navigator.geolocation.getCurrentPosition(showPosition);
+
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+    }
+
+  </script>
+ <ol>
+     {%for challenge in challenges%}
+     <div class = "challenge_body">
+        <div class="container text-center">
+             <div class="row"> 
+               <div class="col-8">
+                 <h1> <li>{{challenge.title}}</li></h1>
+                 <p id="challenge-content">{{challenge.content}}</p>
+               </div>
+
+               <div class="col">
+                 <div class="row">
+                     <p id="points">Points: {{challenge.points}} </p>
+                     <p id="challenge-ctype">Type:<br>{{challenge.cType}} </p>
+                     <p id="location">blah</p>
+                 </div>
+               </div>
+             </div>
+     </div>
+     </div>
+   </li>
+
+     {%endfor%}
+     </ol>
+
+     <div class="container">
+         {% block content %}{% endblock %}
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+
+  </body>
+
+  <script>
+    
+  </script>
+
+</html>
+
+
