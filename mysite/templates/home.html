@@ -7,6 +7,8 @@
 {% if user.is_authenticated %}
 Hello, {{ user.username }}! You are at the Masale Homepage.
 <p><a href="{% url 'password_change' %}">Password Change</a></p>
+<p><a href="{% url 'leaderboard' %}">Leaderboard</a></p>
+<p><a href="{% url 'challenges-home' %}">See all Challenges</a></p>
 <form action="{% url 'logout' %}" method="post">
     {% csrf_token %}
     <button type="submit">Log Out</button>
