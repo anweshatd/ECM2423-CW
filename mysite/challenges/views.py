@@ -62,7 +62,7 @@ def challengeIndi(request, challenge_id):
     }
     current_user = request.user
     if (current_user.is_authenticated):
-        current_player = Player.objects.get(pk=current_user.id) #need to update sign up page btw
+        current_player = Player.objects.get(pk=current_user.id)
         try:
             uc = userschallenges.objects.get(user=current_player,challenge=context['challenge'])
             context.update({'complete': True})
