@@ -12,11 +12,16 @@
         <p> {{challenge.content}} </p>
         <p> Points: {{challenge.points}} </p>
         <p> Challenge Type: {{challenge.cType}} </p>
+        <p> Submit your location (if this is a location based challenge). By clicking the button you are agreeing to your location being checked.</p>
+        <button onclick="getLocation()" class="btn btn-success"> Verify Location</button>
+        <p id="location">Your Current Coordinates</p>
+
+        
 
         {% if not complete %}
         <form action="/challenges/{{challenge.id}}/" method="post">
             {% csrf_token %}
-            <button type="submit">submit challenge!</button>
+            <button type="submit" class="btn btn-success">submit challenge!</button>
         </form>
         {% else %}
 
@@ -32,5 +37,23 @@
 <a href="{% url 'login' %}">Log In</a>
 <br>
 <a href="{% url 'signup' %}">Sign Up</a>
+
 {% endif %}
+<script> // needs to be before the getlocation button
+    var x = document.getElementById("location");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+
+            navigator.geolocation.getCurrentPosition(showPosition);
+
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+    }
+
+</script>
 {% endblock %}
