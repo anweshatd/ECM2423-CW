@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+<head>
+    <title> {% block title %}Challenge {{challenge.id}} Complete!{% endblock %} </title>
+</head>
+
+
+{% block content %}
+<body>
+    <p>You have completed the challenge '{{challenge.title}}' and earned {{challenge.points}} points. Well done!</p>
+
+    <a href="{% url 'challenges-home' %}">See all challenges</a>
+    <p><a href="{% url 'home' %}">Home</a></p>
+</body>
+{% endblock %}
