@@ -21,7 +21,7 @@ def challengesWithLocation(request):
     context = {
         'challenges': challenge.objects.all()
     }
-    return render(request, "challenges/individualchallenges.html", context)
+    return render(request, "challenges/individualchallenge.html", context)
 
 
 def leaderboard(request):

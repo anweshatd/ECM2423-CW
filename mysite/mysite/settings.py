@@ -97,8 +97,8 @@ DATABASES = {
 
 # Path would differ from person to person
 #GDAL_LIBRARY_PATH = r".venv/lib/python3.11/site-packages/django/contrib/gis/gdal" 
-GDAL_LIBRARY_PATH = '-L/home/linuxbrew/.linuxbrew/Cellar/gdal/3.8.4/lib/libgdal.dylib'
-#GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
+GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
 
 
 # Password validation
