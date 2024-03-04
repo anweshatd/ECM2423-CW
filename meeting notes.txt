@@ -208,7 +208,67 @@ Anwesha having tech issues also
 Our github is open access
 We found an example submission file
 Eliza is constructing the submission file. Sophie is working on the product documents.
+
 Eliza has emailed the lecturer about the product documents because they're confusing.
+
+
+02/03/24
+Present: Lucas, Sophie, Eliza, Alex, Malik
+Main objective: figure out the presentation/demo
+Lucas already has somewhat of a presentation, sent on group chat
+Sophie found a website that can host the code straight from github so you can access it online, but might not get it working by Monday
+Need to split it up so different people do different things
+Computers that can run the app: Sophie's, 
+List of things that we're going to do on the website
+•	Make an account/sign up
+o	show stuff about the password, what you can and can't do? Maybe not seeing as it is minorly broken.
+•	Log in
+o	go to leaderboard
+•	Change password
+•	Go through each page to show they're linked
+•	Make an admin
+•	Log into the admin
+•	Make a challenge?
+
+Our signup screen errors don't work. Sometimes it comes up with the wrong error message.
+Lucas is trying to make a script for the presentation
+
+Do it on Alex's machine, it seems to be working better. Sophie's getting strange errors.
+We'll need to make sure we can switch from presentation to demo without too much faff
+
+At some point we should probably make it so it doesn't make you pick a location on the admin page when creating a non-location-based challenge
+Sophie's just tested it and you can just not put a location in for that
+
+Who's doing what?
+Sophie doesn't mind doing the accounts bit for the demo since she wrote it.
+Lucas and Malik volunteered to do however much of the slides.
+Alex will be clicking things for the demo.
+Sophie could talk whilst Alex is clicking stuff.
+Eliza could talk about the target audience. Students and staff, and you can port the app to other universities. Theoretically.
+
+plan
+Updated plan for demo:
+•	Sign up
+o	Wrong password – username and password as 123
+o	Correct password – alex[number], mincemeat7
+•	Log in as alex[number]
+•	Go to leaderboard
+•	Go to challenges
+o	In challenges you can verify location
+	#note: it doesn't actually verify it against a challenge at the moment it just prints it
+•	Complete a challenge
+•	Go back to leaderboard to show how it's changed
+•	Go to admin page, will be prompted to log in as an admin account. Do so.
+o	Admin username is hooperadmin, password is adminpassword
+•	Now we are in the admin page
+•	Go to challenges
+•	Add a challenge
+o	 Wash Laundry at 30 Degrees
+o	non-location based
+	#because we don't have the demo time to actually find Harrison
+•	Go to homepage
+•	Go to challenges to show the new challenge
+
 
 
 
