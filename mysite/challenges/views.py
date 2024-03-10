@@ -30,6 +30,18 @@ def leaderboard(request):
     }
     return render(request, "challenges/leaderboard.html", context)
 
+def fox(request):
+    context = {
+        'challenges': challenge.objects.all()
+    }
+    return render(request, "challenges/fox.html", context)
+
+def foxCollection(request):
+    context = {
+        'challenges': challenge.objects.all()
+    }
+    return render(request, "challenges/foxCollection.html", context)
+
 
 def verify_player_location(request):
     player_location = Point(float(request.POST['longitude']), float(request.POST['latitude']), srid=4326)
