@@ -23,27 +23,9 @@
  </head>
  <h1 style="text-align:center;"> Challenge List</h1>
  <body class="p-3 mb-2 bg-light text-dark" >
-    <div id="location"> <!-- needs to be before the javscript-->
-    
-  </div>
+ 
 
-  <script> // needs to be before the getlocation button
-    var x = document.getElementById("location");
 
-    function getLocation() {
-        if (navigator.geolocation) {
-
-            navigator.geolocation.getCurrentPosition(showPosition);
-
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
-    function showPosition(position) {
-        x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
-    }
-
-  </script>
  <ol>
      {%for challenge in challenges%}
      <div class = "challenge_body">
@@ -58,6 +40,8 @@
                  <div class="row">
                      <p id="points">Points: {{challenge.points}} </p>
                      <p id="challenge-ctype">Type:<br>{{challenge.cType}} </p>
+                     <p id="location">blah</p>
+                     <button onclick="getLocation()"> verify location</button>
                  </div>
                </div>
              </div>
@@ -77,7 +61,23 @@
     
 
   </body>
+  <script> // needs to be before the getlocation button
+    var x = document.getElementById("location");
 
+    function getLocation() {
+        if (navigator.geolocation) {
+
+            navigator.geolocation.getCurrentPosition(showPosition);
+
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+    }
+
+  </script>
   <script>
     
   </script>

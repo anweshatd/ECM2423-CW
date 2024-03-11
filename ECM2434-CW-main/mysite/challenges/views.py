@@ -23,24 +23,20 @@ def challengesWithLocation(request):
     }
     return render(request, "challenges/individualchallenge.html", context)
 
+def userProfile(request):
+    current_user = request.user
+    current_player = Player.objects.get(pk=current_user.id)
+    context = {
+            'userschallenges': userschallenges.objects.filter(user=current_player),
+            'player': current_player
+    }
+    return render(request,"challenges/userprofile.html",context)
 
 def leaderboard(request):
     context = {
         'Players': Player.objects.all().order_by('-points')
     }
     return render(request, "challenges/leaderboard.html", context)
-
-def fox(request):
-    context = {
-        'challenges': challenge.objects.all()
-    }
-    return render(request, "challenges/fox.html", context)
-
-def foxCollection(request):
-    context = {
-        'challenges': challenge.objects.all()
-    }
-    return render(request, "challenges/foxCollection.html", context)
 
 
 def verify_player_location(request):
