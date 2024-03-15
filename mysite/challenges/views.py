@@ -97,4 +97,6 @@ def challengeIndi(request, challenge_id):
             link = userschallenges(user=current_player,challenge=context['challenge'],date=today)
             link.save() 
             return render(request, "challenges/challenge_complete.html",context)
+        if (challenge_id == 3):
+            return render(request, "challenges/fox.html",context)
     return render(request, "challenges/challenge.html",context)
