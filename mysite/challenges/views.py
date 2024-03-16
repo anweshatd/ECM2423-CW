@@ -30,6 +30,18 @@ def leaderboard(request):
     }
     return render(request, "challenges/leaderboard.html", context)
 
+def fox(request):
+    context = {
+        'challenges': challenge.objects.all()
+    }
+    return render(request, "challenges/fox.html", context)
+
+def foxCollection(request):
+    context = {
+        'challenges': challenge.objects.all()
+    }
+    return render(request, "challenges/foxCollection.html", context)
+
 
 def verify_player_location(request):
     player_location = Point(float(request.POST['longitude']), float(request.POST['latitude']), srid=4326)
@@ -79,10 +91,17 @@ def challengeIndi(request, challenge_id):
                 return HttpResponse("You have already completed this challenge")
             #update user points
             current_player.points += context['challenge'].points
+            #update badge maybe
+            if (context['challenge'].badge != 0):
+                current_player.badges = current_player.badges + context['challenge'].badge
+                if (current_player.badges == 0):
+                    current_player.badges = context['challenge'].badge
             current_player.save()
             #add to user-challenge database
             today = datetime.date.today()
             link = userschallenges(user=current_player,challenge=context['challenge'],date=today)
             link.save() 
             return render(request, "challenges/challenge_complete.html",context)
+        if (challenge_id == 3):
+            return render(request, "challenges/fox.html",context)
     return render(request, "challenges/challenge.html",context)

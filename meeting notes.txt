@@ -208,7 +208,178 @@ Anwesha having tech issues also
 Our github is open access
 We found an example submission file
 Eliza is constructing the submission file. Sophie is working on the product documents.
+
 Eliza has emailed the lecturer about the product documents because they're confusing.
 
+
+02/03/24
+Present: Lucas, Sophie, Eliza, Alex, Malik
+Main objective: figure out the presentation/demo
+Lucas already has somewhat of a presentation, sent on group chat
+Sophie found a website that can host the code straight from github so you can access it online, but might not get it working by Monday
+Need to split it up so different people do different things
+Computers that can run the app: Sophie's, 
+List of things that we're going to do on the website
+•	Make an account/sign up
+o	show stuff about the password, what you can and can't do? Maybe not seeing as it is minorly broken.
+•	Log in
+o	go to leaderboard
+•	Change password
+•	Go through each page to show they're linked
+•	Make an admin
+•	Log into the admin
+•	Make a challenge?
+
+Our signup screen errors don't work. Sometimes it comes up with the wrong error message.
+Lucas is trying to make a script for the presentation
+
+Do it on Alex's machine, it seems to be working better. Sophie's getting strange errors.
+We'll need to make sure we can switch from presentation to demo without too much faff
+
+At some point we should probably make it so it doesn't make you pick a location on the admin page when creating a non-location-based challenge
+Sophie's just tested it and you can just not put a location in for that
+
+Who's doing what?
+Sophie doesn't mind doing the accounts bit for the demo since she wrote it.
+Lucas and Malik volunteered to do however much of the slides.
+Alex will be clicking things for the demo.
+Sophie could talk whilst Alex is clicking stuff.
+Eliza could talk about the target audience. Students and staff, and you can port the app to other universities. Theoretically.
+
+plan
+Updated plan for demo:
+•	Sign up
+o	Wrong password – username and password as 123
+o	Correct password – alex[number], mincemeat7
+•	Log in as alex[number]
+•	Go to leaderboard
+•	Go to challenges
+o	In challenges you can verify location
+	#note: it doesn't actually verify it against a challenge at the moment it just prints it
+•	Complete a challenge
+•	Go back to leaderboard to show how it's changed
+•	Go to admin page, will be prompted to log in as an admin account. Do so.
+o	Admin username is hooperadmin, password is adminpassword
+•	Now we are in the admin page
+•	Go to challenges
+•	Add a challenge
+o	 Wash Laundry at 30 Degrees
+o	non-location based
+	#because we don't have the demo time to actually find Harrison
+•	Go to homepage
+•	Go to challenges to show the new challenge
+
+
+04/03/24
+Present: Sophie, Anwesha, Lucas, Malik, Eliza
+Sophie is having tech issues again
+
+Malik thinks he has an idea for what Anwesha could say in the presentation. Something about what we chose to focus on in our minimum viable product, what we will do.
+Malik says gamify the product further – include a challenge trail.
+
+Lucas first two slides, Malik third, Eliza fourth, Anwesha and Malik talk whilst we switch over?, Alex operates demo whilst Sophie talks.
+
+Feedback
+good teamwork, good (enough) time management, good system
+need to make the user engage more – just reading a piece of information isn't enough
+making sure the user is private – GDPR
+
+07/03/24
+Present: Anwesha, Eliza, Alex, Sophie, Lucas, Malik
+
+Alex and Lucas to work on verifying user's location against challenge – decide on a range and verify. Range: 20 metres? So specifying a very specific point and allowing for variation in location detection. Add the specific point to the challenge description – e.g. Harrison Reception.
+How do we do the privacy/GDPR thing? What date and where it's being stored, Sophie says. Who to do? Eliza to do.
+Eliza to try and get geodjango working
+Sophie to work on badges.
+Someone needs to fill out a bunch of different challenges – Malik?
+maybe we should have challenges for spotting foxes and badgers or ducks or whatever on campus. And fox picture collection – see a fox, take a picture! Maybe an extension… Anwesha to look into it, make it so you can upload pictures.
+treasure hunt challenge thing? Challenge quest. Alex to do.
+Two things for the treasure hunt missions – create a link on each challenge page indicating the next challenge, link on the homepage listing all of the missions.
+Sophie says you could also extend the challenges model to do this.
+Malik to plan a mission
+You need to signify in the database that the mission challenges do not show up on the normal challenges page.
+Remember we were gonna display a list of challenges completed by a user. But list of users that have completed a challenge isn't great for privacy.
+Add to privacy policy/signup page "your username will be visible to other people" – it is on the leaderboard.
+We don't have a users profile page. Malik to make one.
+Malik's tech only works if they download everything and then run it, it's not working through github.
+We have nothing in validation. Eliza to do testing (once sorted out her tech issues). Make it into a professional looking testing document.
+
+Next meeting: 1:45 on Monday
+
+To do:
+•	Eliza – GDPR, sort out tech, testing
+•	Alex and Lucas – verifying locations
+•	Alex – challenge quest?
+•	Malik – users profile page, making more challenges
+•	Sophie – badges
+•	Anwesha – fox collection
+
+11/03/24
+Present: Alex, Malik, Anwesha, Eliza, Lucas, Sophie
+Meeting is meant for revision of feedback
+Guy will email the feedback to Anwesha
+feedback{
+Feedback sections:
+- Problem idea, introduction
+Target audience well-presented
+Components in application
+To improve: what additional challenges do you have?
+Improve UI/user engagement and interaction
+Presentation/demo
+how is the user privacy protected? Was expecting description of how the user is privacy protected in documentation + 1 sentence in presentation for how met GDPR protection
+Group work
+good teamwork – during presentation all were working together
+and time management
+general comment to all groups{
+some groups were missing links to repository and kanban board, or lecturer doesn't have access. if private, change to public.
+next presentation, have a complete working product
+Monday next week, good idea to have full version for lecturer to play with
+We need to book a time for the final presentation. Check location!
+Kanban – check the work in progress limits
+Make sure the names are identifiable or put it in the readme #we did
+}
+How to do testing – test whether what you plan to do is working, if you are happy with the output then you put it on the done part of the validation
+}
+Anwesha forwarded the email
+
+Anwesha: the fox thing half-works. Can take a picture but it doesn't upload, trying to fix that.
+Eliza: having tech issues but working on it
+Sophie: done half of badges
+Malik: start of user profile page
+Alex and Lucas: been busy
+
+Doing fox, user profile page, should we ditch the challenge quest?, gdpr stuff, badges
+Need to finalise the frontend
+Need to come up with more challenges/work out how to transfer database. Could do after Monday?
+
+Malik to do GDPR thing
+
+Get the stuff we're doing done for Thursday, then do the rest of the stuff for Monday.
+Meeting on Friday 1pm, try greenhouse room else find seminar room
+Meeting on Sunday, late afternoon? So Malik might be there. Sort out on Friday.
+
+Monday 25th: 1:30pm Amory C417
+
+Test it on mobile and see if it works? It does.
+
+15/03/24
+Present: Sophie, Anwesha, Eliza, Alex, Malik, Lucas
+Done:
+Sophie: privacy policy
+Malik: user's profile page – worked on. got lots of stuff. gamified it a bit. still a WIP – will contain badges once those exist
+Anwesha: no progress on fox
+Malik: GDPR: how we're storing data and will delete data after a certain amount of time, page saying how the data's kept and a policy. Sophie's done a privacy policy.
+Alex and Lucas stuck on the challenge location verification, have been working on it, will continue working on it
+Eliza: worked on tech issues.
+
+Alex and Lucas spotted we should probably have a map! Like when you click on the location challenges. Anwesha to look into?
+Badges – Sophie – emojis instead of small images for ease – shouldn't take too long
+Anwesha – fox – working on uploading
+Eliza to work with Sophie on the map?
+Eliza now has working tech (Lucas helped) (it runs now!)
+Main issue with location verification, that will probably also show up with the map, is finding a way to pull the challenge location and put it in the javascript
+Malik found a way to get around the issue. So Alex and Lucas to work on the map, leaving Sophie on badges and Eliza to do testing – verification column! Eliza on a fresh machine so testing should work great.
+Sophie, after badges, to do 'how to transfer Alex the database' and maybe then populating with challenges. If she has spare time.
+Anwesha, when done with fox challenge, help Malik with final front end – user profile, listing challenges and users, etc.
 
 
