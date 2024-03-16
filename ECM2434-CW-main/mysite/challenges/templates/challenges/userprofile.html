@@ -2,6 +2,23 @@
 <!--THIS PAGE IS TO DISPLAY A USER'S PROFILE-->
 <head>
     <title> {% block title %}User's Profile{% endblock %} </title>
+    <style>
+      .container-fluid .challenge_body{
+          background-color: green;
+          border-style: outset;
+          border-color:yellow;
+          border-radius: 10px;
+          box-shadow: 9px 10px;
+          margin: 2%;
+          margin-left: 2%;
+          margin-right: 2%;
+          min-height:30px;
+          overflow: scroll;
+          
+        
+       }
+
+  </style>
 </head>
 
 
@@ -9,30 +26,20 @@
 {% if user.is_authenticated %}
 <body>
     Hello {{user.username}}. These are the challenges you've completed. You have {{player.points}} points.
-    
- 
-        
-        
 
-  
-
-
-    <div class="accordion" id="accordionExample">
-        {%for object in userschallenges%}
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                {{object.challenge}}
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
+      <div class="container text-center">
+        <div style="margin-right:10vw;" class="row row-cols" >
+          {%for object in userschallenges%}
+          <div class="col">
+            <div class="container-fluid challenge_body ">
+             <h1>{{object.challenge}}</h1>
               {{object.challenge.content}}
             </div>
           </div>
+            {%endfor%}
         </div>
-        {%endfor%}
       </div>
+    
         <a href="{% url 'challenges-home' %}">See all challenges</a>
 </body>
 

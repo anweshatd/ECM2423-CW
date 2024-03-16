@@ -70,11 +70,13 @@ def user_location(request):
 
 
 def challengeIndi(request, challenge_id):
+    current_user = request.user
     context = {
         'challenge': challenge.objects.get(pk=challenge_id),
-        'complete': False
+        'complete': False,
+        'otherplayers': (userschallenges.objects.filter(challenge=challenge.objects.get(pk=challenge_id))).exclude(user = Player.objects.get(pk=current_user.id)),
     }
-    current_user = request.user
+    
     if (current_user.is_authenticated):
         current_player = Player.objects.get(pk=current_user.id)
         try:
