@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<head>
+  <style>
+    .welcome
+    {
+      font-family:'Times New Roman', Times, serif;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'leaderboard' %}">Leaderboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'challenges-home' %}">Challenges</a>
+          </li>
+        </ul>
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-success">Log Out</button>
+        </form>
+  
+      </div>
+    </div>
+  </nav>
+  
+  <div class="welcome">
+    <h1>Hello, {{ user.username }}! You are at the Masale Homepage.</h1>
+    <p><a href="{% url 'password_change' %}">Password Change</a></p>
+    <!-- <p><a href="{% url 'leaderboard' %}">Leaderboard</a></p>
+    <p><a href="{% url 'challenges-home' %}">See all Challenges</a></p> -->
+    <!-- <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Log Out</button> -->
+      
+    {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}" class="btn btn-success">Log In</a>
+    <br>
+    <a href="{% url 'signup' %}" class="btn btn-success">Sign Up</a>
+    {% endif %}
+  </div>
+  
+  {% endblock %}
+</body>
+</html>
