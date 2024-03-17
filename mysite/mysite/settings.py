@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-ije9bj7*kl&pddv35tn7z_eg6!x6_j9%k92qy=kywsl9#ps_*l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.207.157.183"]
-
+#ALLOWED_HOSTS = ["10.207.157.183"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -97,9 +97,9 @@ DATABASES = {
 
 # Path would differ from person to person
 #GDAL_LIBRARY_PATH = r".venv/lib/python3.11/site-packages/django/contrib/gis/gdal" 
-GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
-
+#GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+#GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
+GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal308.dll"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
