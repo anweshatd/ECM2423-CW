@@ -19,8 +19,6 @@ class challenge(models.Model):
     cType = models.CharField(max_length=100, choices=TYPE_CHOICES)
 
     location = models.PointField(blank=True, null=True)
-
-    badge = models.CharField(max_length=5, default='0') #emoji for badge
     
     def __str__(self):
         return self.title
