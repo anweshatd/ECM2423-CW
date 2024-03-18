@@ -74,11 +74,17 @@
     </div>
     <div class="offcanvas-body">
       <div>
-        Hello, {{ user.username }}! Welcome back to the Exeter Eco-Expedition ! It's great to have you back ! 
+        Hello, {{ user.username }}! Welcome back to the Exeter Eco-Expedition! It's great to have you back! 
         <br>
-        You currently have --- points. 
+        You currently have {{ player.points }} points. 
         <br>
-        Would you like to complete more challenges to get more points ? If so, click the challenges button right now to continue on your journey.
+        {%  if player.badges != '0' %}
+        You currently have these badges: {{player.badges}}
+        {% else %}
+        You don't currently have any badges. Try completing more challenges to earn them!
+        {% endif %}
+        <br>
+        Would you like to complete more challenges to get more points? If so, click the challenges button right now to continue on your journey.
       </div>
       <div onclick="window.open('{% url 'challenges-home' %}')" class="challenge_body">
         Challenge
