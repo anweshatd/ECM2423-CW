@@ -92,7 +92,7 @@
         cLatitude = parseFloat(cLatitude);
 
         const distance = getDistanceFromLatLonInKm(cLatitude, cLongitude, position.coords.latitude, position.coords.longitude );
-        if (distance <= 0.02){
+        if (distance <= 0.05){
             document.getElementById('submit-button').disabled = false;
         } else {
             alert("You are not near enough to the challenge location")
