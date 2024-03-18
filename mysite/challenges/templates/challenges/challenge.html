@@ -11,18 +11,19 @@
         <h1> Challenge: {{challenge.title}}</h1>
         <p> {{challenge.content}} </p>
         <p> Points: {{challenge.points}} </p>
-        <p> Challenge Type: {{challenge.cType}} </p>
+        <p id="cType"> Challenge Type: {{challenge.cType}} </p>
+        <p id="challenge-location" hidden>{{challenge.location}} </p>
         Do you want to see who else has completed the challenge ? Click here
-        <p> Submit your location (if this is a location based challenge). By clicking the button you are agreeing to your location being checked.</p>
-        <button onclick="getLocation()" class="btn btn-success"> Verify Location</button>
-        <p id="location">Your Current Coordinates</p>
-
         
 
+
         {% if not complete %}
+        <p> Submit your location (if this is a location based challenge). By clicking the button you are agreeing to your location being checked.</p>
+        <button id="verify-button" onclick="getLocation()" class="btn btn-success" disabled> Verify Location</button>
+        <p id="location">Your Current Coordinates</p>
         <form action="/challenges/{{challenge.id}}/" method="post">
             {% csrf_token %}
-            <button type="submit" class="btn btn-success">submit challenge!</button>
+            <button id="submit-button" type="submit" class="btn btn-success" disabled>submit challenge!</button>
         </form>
         {% else %}
 
@@ -63,6 +64,10 @@
 {% endif %}
 <script> // needs to be before the getlocation button
     var x = document.getElementById("location");
+    var y = document.getElementById("challenge-location");
+    const input = y.innerHTML;
+
+    
 
     function getLocation() {
         if (navigator.geolocation) {
@@ -74,8 +79,59 @@
         }
     }
     function showPosition(position) {
-        x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+        // x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+        // Step 1: Split to get the coordinate part
+        const coordinatePart = input.split(';')[1];
+
+        // Step 2: Remove unnecessary characters and trim
+        const coordinates = coordinatePart.replace('POINT (', '').replace(')', '').trim();
+
+        // Step 3: Split by space to get individual coordinates
+        var [cLongitude, cLatitude] = coordinates.split(' ');
+        cLongitude = parseFloat(cLongitude);
+        cLatitude = parseFloat(cLatitude);
+
+        const distance = getDistanceFromLatLonInKm(cLatitude, cLongitude, position.coords.latitude, position.coords.longitude );
+        if (distance <= 0.02){
+            document.getElementById('submit-button').disabled = false;
+        } else {
+            alert("You are not near enough to the challenge location")
+        }
     }
+
+    function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+        const R = 6371; // Radius of the Earth in kilometers
+        const dLat = deg2rad(lat2 - lat1);
+        const dLon = deg2rad(lon2 - lon1);
+
+        const a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        const d = R * c; // Distance in kilometers
+
+        return d;
+        }
+
+    function deg2rad(deg) {
+        return deg * (Math.PI / 180);
+    }
+
+    var z =  document.getElementById("cType").innerHTML;
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        if (z === " Challenge Type: Location-Based "){
+            document.getElementById('verify-button').disabled = false;
+
+        } else {
+            document.getElementById('submit-button').disabled = false;
+        }
+        
+        
+    }); 
+
 
 </script>
 {% endblock %}
