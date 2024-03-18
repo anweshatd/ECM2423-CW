@@ -93,6 +93,12 @@
         See your challenges
       </div>
 
+      <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Log Out</button>
+      </form>
+      </div>
+
 
 
 
@@ -115,10 +121,7 @@
             <a class="nav-link" href="{% url 'challenges-home' %}">Challenges</a>
           </li>
         </ul>
-        <form action="{% url 'logout' %}" method="post">
-          {% csrf_token %}
-          <button type="submit" class="btn btn-success">Log Out</button>
-        </form>
+
   
       </div>
     </div>
