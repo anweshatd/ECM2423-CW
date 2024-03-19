@@ -101,3 +101,6 @@ def challengeIndi(request, challenge_id):
             link.save() 
             return render(request, "challenges/challenge_complete.html",context)
     return render(request, "challenges/challenge.html",context)
+
+def badges(request):
+    return render(request, "challenges/badges.html")
