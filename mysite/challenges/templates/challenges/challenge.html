@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
 <head>
-    <title> {% block title %}Challenge {{challenge.id}}{% endblock %} </title>
+    <title>{% block title %}Challenge {{challenge.id}}{% endblock %}</title>
 </head>
 
 
 {% block content %}
 {% if user.is_authenticated %}
 <body>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
         <h1> Challenge: {{challenge.title}}</h1>
         <p> {{challenge.content}} </p>
         <p> Points: {{challenge.points}} </p>
@@ -48,9 +49,36 @@
             </div>
           </div>
 
+        <div id='map' style="width: 100%; height: 400;"></div>
 
+        <script>
+            
+            function initMap() {
+                
+                const input = y.innerHTML;
+                const coordinatePart = input.split(';')[1];
+                const coordinates = coordinatePart.replace('POINT (', '').replace(')', '').trim();
+                var [cLongitude, cLatitude] = coordinates.split(' ');
+                cLongitude = parseFloat(cLongitude);
+                cLatitude = parseFloat(cLatitude);
+                
+                // Last argument is the zoom level
+                var map = L.map('map').setView([cLatitude, cLongitude], 16);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+                var circle = L.circle([cLatitude, cLongitude], {
+                    color: 'green',
+                    fillColor: 'green',
+                    fillOpacity: 0.3,
+                    radius: 50
+                }).addTo(map);
+            }
+                
 
-
+        </script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     </body>
 
@@ -92,7 +120,7 @@
         cLatitude = parseFloat(cLatitude);
 
         const distance = getDistanceFromLatLonInKm(cLatitude, cLongitude, position.coords.latitude, position.coords.longitude );
-        if (distance <= 0.02){
+        if (distance <= 0.05){ //radius of the verification location in km
             document.getElementById('submit-button').disabled = false;
         } else {
             alert("You are not near enough to the challenge location")
@@ -124,12 +152,13 @@
         
         if (z === " Challenge Type: Location-Based "){
             document.getElementById('verify-button').disabled = false;
+            initMap();
 
         } else {
             document.getElementById('submit-button').disabled = false;
         }
         
-        
+
     }); 
 
 
