@@ -382,4 +382,68 @@ Malik found a way to get around the issue. So Alex and Lucas to work on the map,
 Sophie, after badges, to do 'how to transfer Alex the database' and maybe then populating with challenges. If she has spare time.
 Anwesha, when done with fox challenge, help Malik with final front end – user profile, listing challenges and users, etc.
 
+18/03/24
+Lecturer fiddling around with our program
+"You finish and you have zero points?"
+Poster – Ele page, assessment, group submission, sprint 2, template for poster
+Lecturer looking at testing
+You want to move some of the specification items
+Login page not done? being tested
+Comment section of each bit of code – should have contributors. If it was done by Alex and Lucas, need to comment it.
+Poster:
+Homescreen (on mobile)
+Features of application – normal user, location, location verification
+You are pitching your application
+Business value or problem that led to development of solution
+Numbers – numbers of users?
+UK has 50% of people not knowing sustainability or something like that – research. Where does your application fit in
+What we expect this issue to do in the future – projected impact of application
+Application logo
+Tell us about your application
+Group website
+like usual, 2mins, 3mins demo
+(back on messing around with our project)
+Should include the location for your presentation
+Please create one location-based challenge for the presentation
+Website should have a mobile version of it
+
+Eliza having testing problems
+
+Meeting tomorrow (Tuesday) then meeting and submit on Wednesday
+Tuesday: 12:30, usual place
+Wednesday 1:30
+
+Malik to make a list of challenges? Then Sophie to put in the challenges. What they are, location, why they are good for the environment or whatever. Put them in a readme? Anyone who wants to can make challenges actually, open to anyone
+Sophie thinks she's found a way to transfer the database
+
+Eliza to do the validation, currently fixing tech issues
+
+
+19/03/24
+Present: Anwesha, Alex, Lucas, Sophie, Eliza, Malik
+Sophie's done badges and pushed it
+Alex and Lucas have just done the map
+Eliza doing testing
+Anwesha, Malik no updates
+Malik still working on user's profile page. Need to make it look nicer on phone.
+
+Check if we need to host the website
+
+Need to put comments in code! Alex and Lucas specifically need to
+
+User engagement – fox idea
+
+Logo – a leaf with a circle round it and an M for Masale? Alex to work on that.
+Eliza to do poster
+Do we need to do documentation?
+
+Example submission on the ELE for sprint 2 is the same as the one for sprint 1. Eliza has emailed the lecturer about it
+
+Malik's device is blocking the website because it's insecure
+
+Sophie to help Anwesha with the fox challenge
+Lucas to do comments
+
+Sophie to work on document things – can be adapted tomorrow if necessary
+
 
