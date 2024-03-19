@@ -12,9 +12,97 @@
       font-family:'Times New Roman', Times, serif;
       text-align:center;
     }
+
+    .pushable {
+  background: hsl(340deg 100% 40%);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  margin-left:30vw;
+  margin-right:30vw;
+  margin-top:40vh;
+}
+.front {
+  display: block;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-top: 40%;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+.front {
+      will-change: transform;
+      transition: transform 250ms;
+    }
+#button-text{
+      text-align: center;
+      margin-top: 60vh;
+  }
+  
+  .pushable:hover .front {
+      transform: translateY(-6px);
+    }
+    
+    .pushable:active .front {
+      transform: translateY(-2px);
+    }
+    
   </style>
 </head>
 <body>
+
+  
+  <button class="pushable" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <span class="front">
+      <p id="button text">Push me</p>
+    </span>
+  </button>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        Hello, {{ user.username }}! Welcome back to the Exeter Eco-Expedition! It's great to have you back! 
+        <br>
+        You currently have {{ player.points }} points. 
+        <br>
+        {%  if player.badges != '0' %}
+        You currently have these badges: {{player.badges}}
+        {% else %}
+        You don't currently have any badges. Try completing more challenges to earn them!
+        {% endif %}
+        <br>
+        Would you like to complete more challenges to get more points? If so, click the challenges button right now to continue on your journey.
+      </div>
+      <div onclick="window.open('{% url 'challenges-home' %}')" class="challenge_body">
+        Challenge
+      </div>
+      To view the Leaderboard, click this button.
+      <div onclick="window.open('{% url 'leaderboard' %}')" class="challenge_body">
+        Leaderboard
+      </div>
+
+      You have completed --- challenges. To see all the challenges you have completed. Click here
+      <div onclick="window.open('{% url 'userProfile' %}')" class="challenge_body">
+        See your challenges
+      </div>
+
+
+
+
+  <div style="display:none">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -42,6 +130,7 @@
     </div>
   </nav>
   
+
   <div class="welcome">
     <h1>Hello, {{ user.username }}! You are at the Masale Homepage.</h1>
     <p><a href="{% url 'password_change' %}">Password Change</a></p>
@@ -52,13 +141,16 @@
         <button type="submit" class="btn btn-success">Log Out</button> -->
       
     {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}" class="btn btn-success">Log In</a>
-    <br>
-    <a href="{% url 'signup' %}" class="btn btn-success">Sign Up</a>
-    {% endif %}
+    <div>
+      <h1>You are not logged in</h1>
+        <a href="{% url 'login' %}" class="btn btn-success">Log In</a>
+        <br>
+        <a href="{% url 'signup' %}" class="btn btn-success">Sign Up</a>
+        {% endif %}
+    </div>
   </div>
   
   {% endblock %}
+  </div>
 </body>
 </html>

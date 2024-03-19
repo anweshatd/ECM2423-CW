@@ -23,24 +23,20 @@ def challengesWithLocation(request):
     }
     return render(request, "challenges/individualchallenge.html", context)
 
+def userProfile(request):
+    current_user = request.user
+    current_player = Player.objects.get(pk=current_user.id)
+    context = {
+            'userschallenges': userschallenges.objects.filter(user=current_player),
+            'player': current_player
+    }
+    return render(request,"challenges/userprofile.html",context)
 
 def leaderboard(request):
     context = {
         'Players': Player.objects.all().order_by('-points')
     }
     return render(request, "challenges/leaderboard.html", context)
-
-def fox(request):
-    context = {
-        'challenges': challenge.objects.all()
-    }
-    return render(request, "challenges/fox.html", context)
-
-def foxCollection(request):
-    context = {
-        'challenges': challenge.objects.all()
-    }
-    return render(request, "challenges/foxCollection.html", context)
 
 
 def verify_player_location(request):
@@ -74,11 +70,13 @@ def user_location(request):
 
 
 def challengeIndi(request, challenge_id):
+    current_user = request.user
     context = {
         'challenge': challenge.objects.get(pk=challenge_id),
-        'complete': False
+        'complete': False,
+        'otherplayers': (userschallenges.objects.filter(challenge=challenge.objects.get(pk=challenge_id))).exclude(user = Player.objects.get(pk=current_user.id)),
     }
-    current_user = request.user
+    
     if (current_user.is_authenticated):
         current_player = Player.objects.get(pk=current_user.id)
         try:
@@ -91,6 +89,11 @@ def challengeIndi(request, challenge_id):
                 return HttpResponse("You have already completed this challenge")
             #update user points
             current_player.points += context['challenge'].points
+            #update badge maybe
+            if (context['challenge'].badge != '0'):
+                current_player.badges = current_player.badges + context['challenge'].badge
+                if (current_player.badges == 0):
+                    current_player.badges = context['challenge'].badge
             current_player.save()
             #add to user-challenge database
             today = datetime.date.today()

@@ -12,6 +12,7 @@
         <p> {{challenge.content}} </p>
         <p> Points: {{challenge.points}} </p>
         <p> Challenge Type: {{challenge.cType}} </p>
+        Do you want to see who else has completed the challenge ? Click here
         <p> Submit your location (if this is a location based challenge). By clicking the button you are agreeing to your location being checked.</p>
         <button onclick="getLocation()" class="btn btn-success"> Verify Location</button>
         <p id="location">Your Current Coordinates</p>
@@ -29,7 +30,28 @@
         {% endif %}
 
         <a href="{% url 'challenges-home' %}">See all challenges</a>
-</body>
+
+
+        <!-- this is the offcanvas section-->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">List Of Other Users Who Have Completed Challenge</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              {%for players in otherplayers %}
+                <h6>{{players.user}}</h6><br>
+              {%endfor%}
+            </div>
+          </div>
+
+
+
+
+
+    </body>
 
 
 {% else %}
