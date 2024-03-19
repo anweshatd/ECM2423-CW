@@ -115,3 +115,7 @@ def challengeIndi(request, challenge_id):
         if ((current_user.is_authenticated) and (challenge_id == 3)):
             return render(request, "challenges/fox.html",context)
     return render(request, "challenges/challenge.html",context)
+  
+
+def badges(request):
+    return render(request, "challenges/badges.html")
