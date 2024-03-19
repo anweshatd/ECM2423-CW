@@ -9,6 +9,12 @@
 <body>
     <p>You have completed the challenge '{{challenge.title}}' and earned {{challenge.points}} points. Well done!</p>
 
+    {% if challenge.badge != 0 %}
+
+    <p>You earned the badge {{challenge.badge}}!</p>
+
+    {% endif %}
+    
     <a href="{% url 'challenges-home' %}">See all challenges</a>
     <p><a href="{% url 'home' %}">Home</a></p>
 </body>

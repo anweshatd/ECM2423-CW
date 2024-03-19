@@ -40,6 +40,9 @@
                  <div class="row">
                      <p id="points">Points: {{challenge.points}} </p>
                      <p id="challenge-ctype">Type:<br>{{challenge.cType}} </p>
+                     {% if challenge.badge != '0' %}
+                     <p id="challenge-ctype">Complete to earn:<br>{{challenge.badge}} </p>
+                     {% endif %}
                  </div>
                </div>
              </div>
