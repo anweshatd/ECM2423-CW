@@ -24,6 +24,16 @@
 </head>
 
 <body>
+    <h1>Take a Picture of a Fox</h1>
+  
+    <!-- <div id="camera">
+      <select id="cameraSelect"></select>
+      <video id="video" width="640" height="480" autoplay></video>
+      <button id="snap">Take Photo</button>
+    </div>
+  
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas> -->
+
     <div class = imageCapture>
         <label for="environment">Take a picture(back camera)</label>
         <br>
@@ -35,9 +45,12 @@
         <input type ="file" id ="user" capture ="user" accept ="image/*">
 
         <br><br>
-        <button onclick="uploadImage()" class="btn btn-success">Upload image!</button>
+        <button id="snap" class="btn btn-success">Upload image!</button>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
     
     </div>
+  
+
     <div class="container">
         {% block content %}{% endblock %}
       
@@ -50,31 +63,27 @@
 </body>
 
 <script>
-    function uploadImage() {
-        var selectedImage = document.getElementById('environment').files[0] || document.getElementById('user').files[0];
+    const snapButton = document.getElementById('snap');
+    const environmentInput = document.getElementById('environment');
+    const userInput = document.getElementById('user');
 
-        if (selectedImage) {
-            var formData = new FormData();
-            formData.append('image', selectedImage);
+    snapButton.addEventListener('click', function() {
+        if (environmentInput.value || userInput.value) {
+            const selectedImage = environmentInput.files[0] || userInput.files[0];
+            const reader = new FileReader();
 
-            // Perform the upload (you may use AJAX/fetch for this)
-            // Example using fetch:
-            fetch('/challenges/foxCollection?imagePath=path/to/uploaded/image.jpg', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.text())
-                .then(html => {
-                    // Redirect to challenges/foxCollection.html
-                    window.location.href = '/challenges/foxCollection?imagePath=path/to/uploaded/image.jpg';
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+            reader.onload = function(event) {
+                const imageData = event.target.result;
+                localStorage.setItem('foxImage', imageData);
+                window.location.href = '/challenges/foxCollection';
+            };
+
+            reader.readAsDataURL(selectedImage);
         } else {
-            alert('Please choose a file before uploading.');
+            alert('Please select an image before uploading.');
         }
-    }
+    });
 </script>
+
 
 </html>
