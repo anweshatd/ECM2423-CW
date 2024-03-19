@@ -1,1 +1,1787 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2024-03-15T16:23:06.904Z", "user": 2, "content_type": 7, "object_id": "1", "object_repr": "nfkwen", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2024-03-15T16:25:27.923Z", "user": 2, "content_type": 7, "object_id": "2", "object_repr": "dvadvc", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2024-03-15T16:25:50.508Z", "user": 2, "content_type": 11, "object_id": "1", "object_repr": "carrot", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Badges\"]}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2024-03-15T16:26:57.506Z", "user": 2, "content_type": 7, "object_id": "3", "object_repr": "hkxdex", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2024-03-15T16:27:37.182Z", "user": 2, "content_type": 7, "object_id": "4", "object_repr": "zz", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add user", "content_type": 4, "codename": "add_user"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change user", "content_type": 4, "codename": "change_user"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete user", "content_type": 4, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view user", "content_type": 4, "codename": "view_user"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add content type", "content_type": 5, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change content type", "content_type": 5, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete content type", "content_type": 5, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view content type", "content_type": 5, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add session", "content_type": 6, "codename": "add_session"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change session", "content_type": 6, "codename": "change_session"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete session", "content_type": 6, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view session", "content_type": 6, "codename": "view_session"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add challenge", "content_type": 7, "codename": "add_challenge"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change challenge", "content_type": 7, "codename": "change_challenge"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete challenge", "content_type": 7, "codename": "delete_challenge"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view challenge", "content_type": 7, "codename": "view_challenge"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add userschallenges", "content_type": 8, "codename": "add_userschallenges"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change userschallenges", "content_type": 8, "codename": "change_userschallenges"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete userschallenges", "content_type": 8, "codename": "delete_userschallenges"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view userschallenges", "content_type": 8, "codename": "view_userschallenges"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add developer", "content_type": 9, "codename": "add_developer"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change developer", "content_type": 9, "codename": "change_developer"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete developer", "content_type": 9, "codename": "delete_developer"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view developer", "content_type": 9, "codename": "view_developer"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add game keeper", "content_type": 10, "codename": "add_gamekeeper"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change game keeper", "content_type": 10, "codename": "change_gamekeeper"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete game keeper", "content_type": 10, "codename": "delete_gamekeeper"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view game keeper", "content_type": 10, "codename": "view_gamekeeper"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add player", "content_type": 11, "codename": "add_player"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change player", "content_type": 11, "codename": "change_player"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete player", "content_type": 11, "codename": "delete_player"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view player", "content_type": 11, "codename": "view_player"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$720000$11e9UoTdgWNxSfqdzMMT5U$ZY74u0clN6IudiZuUYSH51mVBMxOSue/3WeNw0MBupw=", "last_login": "2024-03-15T16:21:16.810Z", "is_superuser": false, "username": "carrot", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2024-03-15T16:21:07.317Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$720000$88wjBQxSe4i9NE0jX05Psk$AbwEp70L5Q08TCaG2YzRLANgF0ayFSSF45WdxoSsuzA=", "last_login": "2024-03-15T16:22:30.964Z", "is_superuser": true, "username": "sophiekw", "first_name": "", "last_name": "", "email": "sw1006@exeter.ac.uk", "is_staff": true, "is_active": true, "date_joined": "2024-03-15T16:21:57.610Z", "groups": [], "user_permissions": []}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "challenges", "model": "challenge"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "challenges", "model": "userschallenges"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "accounts", "model": "developer"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "accounts", "model": "gamekeeper"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "accounts", "model": "player"}}, {"model": "sessions.session", "pk": "i961eb0lgnwknbwsrp2w4l9jzy975oom", "fields": {"session_data": ".eJxVjMEOgjAQRP-lZ9PQQl3q0Tvf0Ox2txY1JaFwMv67YDjocea9mZcKuC45rFXmMLK6KKtOvx1hfEjZAd-x3CYdp7LMI-ld0QetephYntfD_TvIWPO29i6RgS6eG07Us2uTYQsWkKVBk4z3RCD9FkHQ0pe4yB204oCTVe8PA-I4-g:1rlAKE:9FruJ3E29dOUGuAu5NleDJfcNQiiZpoMc7fh_dCH0vs", "expire_date": "2024-03-29T16:22:30.966Z"}}, {"model": "sessions.session", "pk": "s8z6fk1zabrolec7eafqh82dzh6m3otn", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hCgBaYu3XsGMsNMpWpoUtqV8e7apAvd_vfef6mE21rS1mRJE6uzsur0uxHmh9Qd8B3rbdZ5rusykd4VfdCmrzPL83K4fwcFW_nWI_jAg3dxEAfRk4Fs7GjFCwr7jJEZQqTsgY0hDggdRciEwfSd6516fwDqADgK:1rlAJ2:CSOjvoWkDS3hmyCkDu5OW_C9u__jFikKgr9ctGA_PtM", "expire_date": "2024-03-29T16:21:16.812Z"}}, {"model": "challenges.challenge", "pk": 1, "fields": {"title": "nfkwen", "content": "dwv nw;kV", "points": 9, "cType": "Non Location-Based", "location": null, "badge": "🌱"}}, {"model": "challenges.challenge", "pk": 2, "fields": {"title": "dvadvc", "content": "vdadsc", "points": 6, "cType": "Non Location-Based", "location": null, "badge": "😎"}}, {"model": "challenges.challenge", "pk": 3, "fields": {"title": "hkxdex", "content": "xdxd", "points": 2, "cType": "Non Location-Based", "location": null, "badge": "😁"}}, {"model": "challenges.challenge", "pk": 4, "fields": {"title": "zz", "content": "zz", "points": 1, "cType": "Non Location-Based", "location": null, "badge": "😀"}}, {"model": "challenges.userschallenges", "pk": 1, "fields": {"user": 1, "challenge": 1, "date": "2024-03-15"}}, {"model": "challenges.userschallenges", "pk": 2, "fields": {"user": 1, "challenge": 2, "date": "2024-03-15"}}, {"model": "challenges.userschallenges", "pk": 3, "fields": {"user": 1, "challenge": 4, "date": "2024-03-15"}}, {"model": "accounts.player", "pk": 1, "fields": {"user": 1, "points": 16, "badges": "🌱😎😀"}}]
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-03-15T16:23:06.904Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "nfkwen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-03-15T16:25:27.923Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "dvadvc",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-03-15T16:25:50.508Z",
+        "user": 2,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "carrot",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Badges\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-03-15T16:26:57.506Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "hkxdex",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-03-15T16:27:37.182Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "zz",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-03-18T13:11:38.670Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "hkxdex",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-03-18T13:11:38.674Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "dvadvc",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-03-18T13:11:38.675Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "nfkwen",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-03-18T13:13:19.081Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Use a Reusable Cup/Bottle",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-03-18T13:13:28.014Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "zz",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-03-18T14:36:04.331Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Use the Students On The Move (SOTM) Scheme",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-03-18T14:36:19.324Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "zz",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-03-18T14:36:19.326Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "hkxdex",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-03-18T14:36:19.328Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "dvadvc",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-03-18T14:36:19.329Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "nfkwen",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-03-18T14:37:50.172Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Make a Pledge to Prevent Food Waste",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-03-18T14:38:21.035Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "Wash Laundry at 30 Degrees",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-03-18T14:38:44.087Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Use a Sustainable Mode of Transport for Your Next Trip to Campus",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-03-18T14:39:26.968Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Make Sustainable Food Choices",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-03-18T14:42:41.649Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "11",
+        "object_repr": "Harrison Building Solar Panels",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-03-18T14:45:43.406Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "12",
+        "object_repr": "Reed Pond",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-03-18T14:49:46.907Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "13",
+        "object_repr": "Electric Vehicle Charging Stations - Pod Point",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-03-18T14:53:09.566Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "14",
+        "object_repr": "Save energy by turning the Thermostat down",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-03-18T14:53:45.226Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "14",
+        "object_repr": "Save energy by turning the Thermostat down",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-03-18T14:55:24.373Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "15",
+        "object_repr": "Swap to an electric car",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-03-18T14:59:11.163Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "16",
+        "object_repr": "Eat a plant-based meal",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-03-18T15:06:04.762Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "17",
+        "object_repr": "Sign a petition",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-03-18T15:07:53.281Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "18",
+        "object_repr": "Watch a documentary",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-03-18T15:17:31.537Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "19",
+        "object_repr": "Buy second-hand",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-03-18T15:19:23.742Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "20",
+        "object_repr": "Share Masale with friends!",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-03-18T15:30:10.143Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "21",
+        "object_repr": "Use a Reusable Bag",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-03-18T15:31:49.945Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "22",
+        "object_repr": "Use To Good To Go",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-03-18T15:36:24.081Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "23",
+        "object_repr": "Help Bees",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-03-18T15:37:56.725Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "24",
+        "object_repr": "Mend your clothes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-03-18T15:44:41.382Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "25",
+        "object_repr": "Learn about Exeter Uni's Sustainability",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-03-18T15:47:34.358Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "22",
+        "object_repr": "Use To Good To Go",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Content\", \"Points\", \"CType\", \"Location\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-03-18T15:49:02.408Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "26",
+        "object_repr": "Calculate your carbon footprint",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-03-18T15:53:45.535Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "27",
+        "object_repr": "Visit the Exeter Community Garden",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-03-18T15:55:19.106Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "28",
+        "object_repr": "Sustainability Newsletter",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-03-18T15:56:45.410Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "26",
+        "object_repr": "Calculate your carbon footprint",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-03-18T15:59:41.154Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "29",
+        "object_repr": "Visit the Exeter Farmers' Market",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-03-18T16:00:52.766Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "30",
+        "object_repr": "Slow Food on Campus Society",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-03-18T16:02:02.707Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "31",
+        "object_repr": "Use Ecosia",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-03-18T16:03:10.001Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "32",
+        "object_repr": "Hang up a bird feeder",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2024-03-18T16:05:06.559Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "33",
+        "object_repr": "Complete a wildlife survey",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2024-03-18T17:43:27.282Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "35",
+        "object_repr": "tghtyrb",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2024-03-18T17:45:15.620Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "35",
+        "object_repr": "tghtyrb",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2024-03-18T18:11:52.830Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Use a Reusable Cup/Bottle",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Badge\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2024-03-18T18:13:08.076Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "33",
+        "object_repr": "Complete a wildlife survey",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Badge\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2024-03-18T18:16:22.427Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "23",
+        "object_repr": "Help Bees",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Badge\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2024-03-18T18:17:33.557Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "31",
+        "object_repr": "Use Ecosia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Badge\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2024-03-18T18:20:34.875Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Make Sustainable Food Choices",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Badge\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2024-03-18T18:24:56.132Z",
+        "user": 2,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "sophiekw",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Badges\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add challenge",
+        "content_type": 7,
+        "codename": "add_challenge"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change challenge",
+        "content_type": 7,
+        "codename": "change_challenge"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete challenge",
+        "content_type": 7,
+        "codename": "delete_challenge"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view challenge",
+        "content_type": 7,
+        "codename": "view_challenge"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add userschallenges",
+        "content_type": 8,
+        "codename": "add_userschallenges"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change userschallenges",
+        "content_type": 8,
+        "codename": "change_userschallenges"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete userschallenges",
+        "content_type": 8,
+        "codename": "delete_userschallenges"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view userschallenges",
+        "content_type": 8,
+        "codename": "view_userschallenges"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add developer",
+        "content_type": 9,
+        "codename": "add_developer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change developer",
+        "content_type": 9,
+        "codename": "change_developer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete developer",
+        "content_type": 9,
+        "codename": "delete_developer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view developer",
+        "content_type": 9,
+        "codename": "view_developer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add game keeper",
+        "content_type": 10,
+        "codename": "add_gamekeeper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change game keeper",
+        "content_type": 10,
+        "codename": "change_gamekeeper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete game keeper",
+        "content_type": 10,
+        "codename": "delete_gamekeeper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view game keeper",
+        "content_type": 10,
+        "codename": "view_gamekeeper"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add player",
+        "content_type": 11,
+        "codename": "add_player"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change player",
+        "content_type": 11,
+        "codename": "change_player"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete player",
+        "content_type": 11,
+        "codename": "delete_player"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view player",
+        "content_type": 11,
+        "codename": "view_player"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$11e9UoTdgWNxSfqdzMMT5U$ZY74u0clN6IudiZuUYSH51mVBMxOSue/3WeNw0MBupw=",
+        "last_login": "2024-03-15T16:21:16.810Z",
+        "is_superuser": false,
+        "username": "carrot",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-03-15T16:21:07.317Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$88wjBQxSe4i9NE0jX05Psk$AbwEp70L5Q08TCaG2YzRLANgF0ayFSSF45WdxoSsuzA=",
+        "last_login": "2024-03-18T20:10:19.834Z",
+        "is_superuser": true,
+        "username": "sophiekw",
+        "first_name": "",
+        "last_name": "",
+        "email": "sw1006@exeter.ac.uk",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-03-15T16:21:57.610Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$gZWvpZclVfSKWO0dgDVr2x$fXVLpzYSxJ2gM60vjv7sUocCRuJvygQTT/tiofIOqYs=",
+        "last_login": "2024-03-19T13:24:21.670Z",
+        "is_superuser": false,
+        "username": "testman",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-03-19T13:24:14.457Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$UB2TftZVzc0DGBB5Tyl63R$NTpKRWzdT77QdPjt433s6Xv7BGHnR8C+28qGdO2+8xQ=",
+        "last_login": "2024-03-19T15:13:44.400Z",
+        "is_superuser": false,
+        "username": "apple",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-03-19T15:13:32.456Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "challenges",
+        "model": "challenge"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "challenges",
+        "model": "userschallenges"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "accounts",
+        "model": "developer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "accounts",
+        "model": "gamekeeper"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "accounts",
+        "model": "player"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "i961eb0lgnwknbwsrp2w4l9jzy975oom",
+    "fields": {
+        "session_data": ".eJxVjMEOgjAQRP-lZ9PQQl3q0Tvf0Ox2txY1JaFwMv67YDjocea9mZcKuC45rFXmMLK6KKtOvx1hfEjZAd-x3CYdp7LMI-ld0QetephYntfD_TvIWPO29i6RgS6eG07Us2uTYQsWkKVBk4z3RCD9FkHQ0pe4yB204oCTVe8PA-I4-g:1rlAKE:9FruJ3E29dOUGuAu5NleDJfcNQiiZpoMc7fh_dCH0vs",
+        "expire_date": "2024-03-29T16:22:30.966Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jmy96y5cxa9n3khoav3lutcm938wah2f",
+    "fields": {
+        "session_data": ".eJxVjMEOgjAQRP-lZ9PQQl3q0Tvf0Ox2txY1JaFwMv67YDjocea9mZcKuC45rFXmMLK6KKtOvx1hfEjZAd-x3CYdp7LMI-ld0QetephYntfD_TvIWPO29i6RgS6eG07Us2uTYQsWkKVBk4z3RCD9FkHQ0pe4yB204oCTVe8PA-I4-g:1rmJJL:VB0z7tzUWM6agR5_8qSE2ll99b8nvAM7X3QEj4wYqjU",
+        "expire_date": "2024-04-01T20:10:19.838Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "l5dknpxp1vsbbw8xvjl027235c4mzj4w",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hAYEacu3fcMZGAGqRpISrsy3l2bdKHb_977LxVoXUpYu8xhYnVRTh1-t0jpIXUDfKd6azq1usxT1Juid9r12Fie1939OyjUy7f2iJTYWYIh4jEjOGsZEL1BOqEnBkOZTGYDQwbL2YtNZy8OQciapN4f1zA3yg:1rmb9s:vtjgo4-p2sTRzfnX3gl_g6t28xsD4NHyhjYIFGi0KyY",
+        "expire_date": "2024-04-02T15:13:44.402Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "n932ehlxl12d12yz43afuzzaycyvl71j",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQRO_iGln-JbYp6TmDtd5dcADZUpxUiLuTSCmgG817M2-RYF1KWjvPaSJxFlacfrsM-OS6A3pAvTeJrS7zlOWuyIN2eW3Er8vh_h0U6GVbGzBeI3EMjsCOzNpTiDzwbdREGqNRHEzWBOQRFW3BohocZOeNDyA-XwNhOLY:1rmZS1:TtWd03lwZ-46SCU1KkHkL6j88gaS9lmCfvognefwIUA",
+        "expire_date": "2024-04-02T13:24:21.676Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "s8z6fk1zabrolec7eafqh82dzh6m3otn",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hCgBaYu3XsGMsNMpWpoUtqV8e7apAvd_vfef6mE21rS1mRJE6uzsur0uxHmh9Qd8B3rbdZ5rusykd4VfdCmrzPL83K4fwcFW_nWI_jAg3dxEAfRk4Fs7GjFCwr7jJEZQqTsgY0hDggdRciEwfSd6516fwDqADgK:1rlAJ2:CSOjvoWkDS3hmyCkDu5OW_C9u__jFikKgr9ctGA_PtM",
+        "expire_date": "2024-03-29T16:21:16.812Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "slinhm2gerbpdro1wys46fduhx016tdg",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe_StWkGypTWpXvPQKYzU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMIo5m9acfrdE_NBpB3Kn6TZbnqd1GZPdFXvQaq-z6PNyuH8HhWr51qgdZOdZfURGL02QNgCAdM432bkuklMPkLJwEykje-yR-gAamJIz7w_O-Tef:1rfN76:ifsL1UdSUKNOoKtBf0xOAgHh5kLC1kh7preFuwGOE8k",
+        "expire_date": "2024-03-13T16:49:00.741Z"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 1,
+    "fields": {
+        "title": "Geo Challenge",
+        "content": "Location-based challenge",
+        "points": 20,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.52318698387381 50.711163406238825)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 2,
+    "fields": {
+        "title": "Non-geo Challenge",
+        "content": "Non location-based challenge",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": "SRID=4326;POINT (5.039723276684127 46.9984875565575)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 3,
+    "fields": {
+        "title": "Spot a Fox/Badger/Duck",
+        "content": "Take a picture anytime you spot a fox, a badger or a duck!",
+        "points": 30,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 5,
+    "fields": {
+        "title": "Use a Reusable Cup/Bottle",
+        "content": "Reduce waste by using a reusable cup or bottle instead of single-use plastics.",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "☕️"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 6,
+    "fields": {
+        "title": "Use the Students On The Move (SOTM) Scheme",
+        "content": "Waste collection scheme.",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 7,
+    "fields": {
+        "title": "Make a Pledge to Prevent Food Waste",
+        "content": "Commit to reducing your food waste. Don't throw away food just becuase it's past it's sell by date!",
+        "points": 20,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 8,
+    "fields": {
+        "title": "Wash Laundry at 30 Degrees",
+        "content": "Save energy by washing your clothes at lower temperatures.",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 9,
+    "fields": {
+        "title": "Use a Sustainable Mode of Transport for Your Next Trip to Campus",
+        "content": "pt for walking, cycling, public transport, or car-sharing to reduce your carbon footprint.",
+        "points": 20,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 10,
+    "fields": {
+        "title": "Make Sustainable Food Choices",
+        "content": "Next time you buy a product such as coffee or chocolate, make sure it is fairtrade!",
+        "points": 20,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "🥑"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 11,
+    "fields": {
+        "title": "Harrison Building Solar Panels",
+        "content": "Visit the Harrison Building Solar Panels! The installation of 700 photovoltaic (PV) solar panels on the roof of the Harrison building reduces reliance on fossil fuels and moves the University towards clean, renewable energy. These panels will save 45,282 Kg of CO2 a year with an estimated output of 212,591 kWh a year.\r\n\r\nLocation: Harrison Hub",
+        "points": 25,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.532946542481416 50.73747152778568)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 12,
+    "fields": {
+        "title": "Reed Pond",
+        "content": "Visit Reed Pond! Engage with and learn about biodiversity at Reed Pond, appreciating the importance of ecosystems in sustainability.\r\n\r\nLocation: South-West corner of Reed Pond",
+        "points": 25,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.537829341076519 50.73388443592339)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 13,
+    "fields": {
+        "title": "Electric Vehicle Charging Stations - Pod Point",
+        "content": "Visit the Pod Point EV charging stations! Electric vehicle (EV) charging stations support sustainable transportation by encouraging the use of electric vehicles. This initiative aligns with the University of Exeter's sustainability goals by reducing the carbon footprint associated with campus transportation, contributing towards the university's aim for a carbon net-zero impact by 2030.\r\n\r\nLocation: Southern most charging station in Car Park B",
+        "points": 25,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.531844134472768 50.73908109413281)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 14,
+    "fields": {
+        "title": "Save energy by turning the Thermostat down",
+        "content": "Turn your thermostat down and put on a extra layer instead to reduce you heating bill, save energy and save the planet! A smart thermostat will tell you how much energy you have saved!",
+        "points": 5,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 15,
+    "fields": {
+        "title": "Swap to an electric car",
+        "content": "When you next need to replace your car, swap to an electric one for an incredible 1,000 points!",
+        "points": 1000,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 16,
+    "fields": {
+        "title": "Eat a plant-based meal",
+        "content": "Did you know that a vegan diet results in 75% less climate-heating emissions, water pollution and land use than diets with more than 100g of meat a day? Do your part to save the planet by swapping out one of your meals for one without meat or dairy.",
+        "points": 15,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 17,
+    "fields": {
+        "title": "Sign a petition",
+        "content": "Go to https://petition.parliament.uk/ and find and sign a petition related to sustainability! You can search for one with the keyword 'sustainability' or input your postcode to find a petition being signed by people near you.\r\n(For British citizens or UK residents only)",
+        "points": 30,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 18,
+    "fields": {
+        "title": "Watch a documentary",
+        "content": "Educate yourself by watching a documentary on sustainabilty. Masale suggests The 11th Hour (2007) and Tapped (2009).",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 19,
+    "fields": {
+        "title": "Buy second-hand",
+        "content": "Buying all your clothes brand new is expensive and unsustainable. Next time you need a new outfit, try visiting a charity shop in Exeter first.\r\n\r\nLocation: Cancer Research UK on Sidwell Street",
+        "points": 20,
+        "cType": "Non Location-Based",
+        "location": "SRID=4326;POINT (-3.523445799742401 50.7271824739696)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 20,
+    "fields": {
+        "title": "Share Masale with friends!",
+        "content": "Encourage your loved ones to be sustainable by getting them to sign up to Masale! The more people who make sustainable choices the greater the effect.",
+        "points": 5,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 21,
+    "fields": {
+        "title": "Use a Reusable Bag",
+        "content": "Reduce waste by using a Bag for Life instead of a plastic bag!",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 22,
+    "fields": {
+        "title": "Use To Good To Go",
+        "content": "To Good To Go is an app that allows you to buy surplus food from local businesses for a cheaper price! Help reduce food waste by getting a magic bag from the Market Place Forum Shop!\r\n\r\nLocation: Market Place Forum",
+        "points": 25,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.533822629077604 50.73521639620771)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 23,
+    "fields": {
+        "title": "Help Bees",
+        "content": "Encourage bees to come to your garden by following the RHS Plants for Pollinators guide. You could also provide them with water and avoid using pesticides.",
+        "points": 20,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "🐝"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 24,
+    "fields": {
+        "title": "Mend your clothes",
+        "content": "Instead of throwing away your clothes next time they get a hole, try darning it.",
+        "points": 20,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 25,
+    "fields": {
+        "title": "Learn about Exeter Uni's Sustainability",
+        "content": "Take a trip to the library and research what the University of Exeter is doing to follow the Sustainable Development Goals Accord! Available at: https://www.exeter.ac.uk/about/sdgs/\r\n\r\nLocation: Forum Library entrance",
+        "points": 10,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.533517649653729 50.73541453131396)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 26,
+    "fields": {
+        "title": "Calculate your carbon footprint",
+        "content": "Calculate your carbon footprint online with the WWF Footprint Calculator and identify areas where you can reduce your carbon consumption.",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 27,
+    "fields": {
+        "title": "Visit the Exeter Community Garden",
+        "content": "Created by students and staff in 2011, the Garden aims to solve issues of food security, sustainability, habitat protection and biodiversity. \r\n\r\nLocation 9 Valley Park Close, Exeter, EX4 5HJ",
+        "points": 15,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.523056120834189 50.74469654569259)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 28,
+    "fields": {
+        "title": "Sustainability Newsletter",
+        "content": "Sign up to the University of Exeter Sustainability Newsletter to recieve monthly Sustainability updates. https://shorturl.at/lnRX0",
+        "points": 5,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 29,
+    "fields": {
+        "title": "Visit the Exeter Farmers' Market",
+        "content": "Reduce your carbon footprint by shopping locally at the Exeter Farmers' Market, held at the junction of Fore Street and South Street every Thursday, 9am - 2pm.",
+        "points": 25,
+        "cType": "Location-Based",
+        "location": "SRID=4326;POINT (-3.532332564773057 50.72062547014946)",
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 30,
+    "fields": {
+        "title": "Slow Food on Campus Society",
+        "content": "Join the Slow Food on Campus society at https://slowfoodoncampussociety.wordpress.com/",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 31,
+    "fields": {
+        "title": "Use Ecosia",
+        "content": "Use the Ecosia search engine to plant trees with every search!",
+        "points": 10,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "🌎"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 32,
+    "fields": {
+        "title": "Hang up a bird feeder",
+        "content": "Support local wildlife by hanging up a bird feeder filled with seeds.",
+        "points": 15,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "0"
+    }
+},
+{
+    "model": "challenges.challenge",
+    "pk": 33,
+    "fields": {
+        "title": "Complete a wildlife survey",
+        "content": "Complete a wildlife survey. https://www.devonwildlifetrust.org/north-devon-wildlife-survey",
+        "points": 15,
+        "cType": "Non Location-Based",
+        "location": null,
+        "badge": "🦆"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "challenge": 1,
+        "date": "2024-02-28"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "challenge": 2,
+        "date": "2024-02-28"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 4,
+    "fields": {
+        "user": 2,
+        "challenge": 28,
+        "date": "2024-03-18"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 5,
+    "fields": {
+        "user": 2,
+        "challenge": 5,
+        "date": "2024-03-18"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 6,
+    "fields": {
+        "user": 2,
+        "challenge": 33,
+        "date": "2024-03-18"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 7,
+    "fields": {
+        "user": 2,
+        "challenge": 23,
+        "date": "2024-03-18"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 8,
+    "fields": {
+        "user": 2,
+        "challenge": 31,
+        "date": "2024-03-18"
+    }
+},
+{
+    "model": "challenges.userschallenges",
+    "pk": 9,
+    "fields": {
+        "user": 2,
+        "challenge": 10,
+        "date": "2024-03-18"
+    }
+},
+{
+    "model": "accounts.player",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "points": 16,
+        "badges": "0"
+    }
+},
+{
+    "model": "accounts.player",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "points": 80,
+        "badges": "☕️🦆🐝🌎🥑"
+    }
+},
+{
+    "model": "accounts.player",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "points": 0,
+        "badges": "0"
+    }
+},
+{
+    "model": "accounts.player",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "points": 0,
+        "badges": "0"
+    }
+}
+]
