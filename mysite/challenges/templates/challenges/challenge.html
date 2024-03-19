@@ -8,6 +8,7 @@
 {% block content %}
 {% if user.is_authenticated %}
 <body>
+    <!-- Leaflet CSS for map functionality -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
         <h1> Challenge: {{challenge.title}}</h1>
         <p> {{challenge.content}} </p>
@@ -49,10 +50,15 @@
             </div>
           </div>
 
+        <!-- Challenge map div -->
         <div id='map' style="width: 100%; height: 400;"></div>
 
         <script>
             
+            /**
+             * Initializes the map with the challenge location.
+             * @author Lucas and Alex
+             */
             function initMap() {
                 
                 const input = y.innerHTML;
@@ -78,6 +84,7 @@
                 
 
         </script>
+        <!-- Leaflet JS for map functionality -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     </body>
@@ -90,13 +97,17 @@
 <a href="{% url 'signup' %}">Sign Up</a>
 
 {% endif %}
-<script> // needs to be before the getlocation button
+<script>
+    
     var x = document.getElementById("location");
     var y = document.getElementById("challenge-location");
     const input = y.innerHTML;
 
     
-
+    /**
+     * Retrieves the user's current location.
+     * @author Lucas and Alex
+     */
     function getLocation() {
         if (navigator.geolocation) {
 
@@ -106,15 +117,17 @@
             x.innerHTML = "Geolocation is not supported by this browser.";
         }
     }
-    function showPosition(position) {
-        // x.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
-        // Step 1: Split to get the coordinate part
-        const coordinatePart = input.split(';')[1];
 
-        // Step 2: Remove unnecessary characters and trim
+    /**
+     * Displays the user's position and checks if it is within the challenge radius.
+     * @param {Object} position - The position object containing latitude and longitude.
+     * @author Lucas and Alex
+     */
+    function showPosition(position) {
+        
+        const coordinatePart = input.split(';')[1];
         const coordinates = coordinatePart.replace('POINT (', '').replace(')', '').trim();
 
-        // Step 3: Split by space to get individual coordinates
         var [cLongitude, cLatitude] = coordinates.split(' ');
         cLongitude = parseFloat(cLongitude);
         cLatitude = parseFloat(cLatitude);
@@ -127,6 +140,15 @@
         }
     }
 
+    /**
+     * Calculates the distance between two pairs of latitude and longitude coordinates using Haversine formula
+     * @param {number} lat1 - Latitude of the first point (challenge latitude)
+     * @param {number} lon1 - Longitude of the first point (challenge longitude)
+     * @param {number} lat2 - Latitude of the second point (player latitude)
+     * @param {number} lon2 - Longitude of the second point (player longitude)
+     * @returns {number} The distance in kilometers.
+     * @author Lucas and Alex
+     */
     function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
         const R = 6371; // Radius of the Earth in kilometers
         const dLat = deg2rad(lat2 - lat1);
@@ -142,12 +164,19 @@
 
         return d;
         }
-
+    
+    /**
+     * Converts degrees to radians.
+     * @param {number} deg - The value in degrees.
+     * @returns {number} The value in radians.
+     * @author Lucas and Alex
+     */
     function deg2rad(deg) {
         return deg * (Math.PI / 180);
     }
 
     var z =  document.getElementById("cType").innerHTML;
+     // Event listener for DOM content loaded
     document.addEventListener('DOMContentLoaded', function() {
         
         if (z === " Challenge Type: Location-Based "){
