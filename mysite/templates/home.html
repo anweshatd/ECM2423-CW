@@ -46,6 +46,12 @@
 #button-text{
       text-align: center;
       margin-top: 60vh;
+      
+  }
+  
+ @keyframes fill-in{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
   }
   
   .pushable:hover .front {
@@ -55,15 +61,25 @@
     .pushable:active .front {
       transform: translateY(-2px);
     }
-    
+    .fade-in{
+      animation: fade 6s forwards;
+    }
+    .fade-in-faster{
+      animation: fade 2s forwards;
+    }
+
+    @keyframes fade{
+      from{opacity: 0%}
+      to{opacity: 100%}
+    }
   </style>
 </head>
 <body>
 
-  
-  <button class="pushable" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+
+  <button class="pushable fade-in-faster" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
     <span class="front">
-      <h1 id="button text">Push me</h1>
+      <h1 style="animation: fill-in 4s forwards"id="button text">Push me</h1>
     </span>
   </button>
 
@@ -72,9 +88,11 @@
       <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body fade-in" style="display:inline-block;">
       <div>
-        Hello, {{ user.username }}! Welcome back to the Exeter Eco-Expedition! It's great to have you back! 
+       <h2> Hello, {{ user.username }}! 
+        <br>
+        Welcome back to the Exeter Eco-Expedition! It's great to have you back! 
         <br>
         You currently have {{ player.points }} points. 
         <br>
@@ -85,18 +103,20 @@
         {% endif %}
         <br>
         Would you like to complete more challenges to get more points? If so, click the challenges button right now to continue on your journey.
+      </h2>
       </div>
+
       <div onclick=" location.href = '{% url 'challenges-home' %}' " class="challenge_body">
-        Challenge
+        <h2>Challenge</h2>
       </div>
       To view the Leaderboard, click this button.
       <div onclick= " location.href = '{% url 'leaderboard' %}' " class="challenge_body">
-        Leaderboard
+        <h2>Leaderboard</h2>
       </div>
 
       You have completed --- challenges. To see all the challenges you have completed. Click here
       <div onclick="location.href = '{% url 'userProfile' %}' " class="challenge_body">
-        See your challenges
+       <h2>See your challenges</h2>
       </div>
       <p><a href="{% url 'password_change' %}">Password Change</a></p>
       <form action="{% url 'logout' %}" method="post">
