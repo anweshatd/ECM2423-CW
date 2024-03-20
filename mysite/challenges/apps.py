@@ -1,3 +1,5 @@
+# @author Lucas and Alex
+
 from django.apps import AppConfig
 
 
