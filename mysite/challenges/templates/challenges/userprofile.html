@@ -30,7 +30,7 @@
     You have {{player.points}} points.</h2>
 
       <div class="container text-center">
-        <div style="margin-right:10vw;" class="row row-cols-3" >
+        <div style="margin-right:10vw;" class="row row-cols" >
           {%for object in userschallenges%}
           <div class="col">
             <div class="container-fluid challenge_body ">
@@ -44,6 +44,7 @@
       <br>
     
         <a href="{% url 'challenges-home' %}"><h3 style="text-align:center;">See all challenges</h3></a>
+        <h3 align='center'><a href="{% url 'home' %}">Home</a></h3>
 </body>
 
 
