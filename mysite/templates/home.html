@@ -116,12 +116,12 @@
       <div onclick=" location.href = '{% url 'challenges-home' %}' " class="challenge_body">
         <h2 style="text-align: center;">Challenge</h2>
       </div>
-      <h3>To view the Leaderboard, click this button. </h3>
+      <h3>To view the Leaderboard, click here. </h3>
       <div onclick= " location.href = '{% url 'leaderboard' %}' " class="challenge_body">
         <h2 style="text-align: center;">Leaderboard</h2>
       </div>
 
-      <h3>To see your campus animal picture collection, click here</h3>
+      <h3>To see your campus animal picture collection, click here.</h3>
       <div onclick=" location.href = '{% url 'foxCollection' %}' " class="challenge_body" style="text-align: center;">
         <div style="text-align: center;">Fox/Badger/Duck/Napoleon Collection</div>
       </div>
@@ -131,10 +131,11 @@
        <h2 style="text-align: center;">See your challenges</h2>
       </div>
       <br>
-      <p><a href="{% url 'password_change' %}">Password Change</a></p>
+
+      <p style="text-decoration:none;"><a href="{% url 'password_change' %}" class="btn btn-outline-success btn-lg">Password Change</a></p>
       <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}
-        <button type="submit" class="btn btn-success">Log Out</button>
+        <button type="submit" class="btn btn-outline-success btn-lg">Log Out</button>
       </form>
     </div>
   
@@ -156,9 +157,8 @@
     <div class="position-absolute top-50">
       <h1 class="display-1 text-center alert alert-danger" role="alert">You are not logged in</h1>
       <div style="margin-left:30vw;" class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-        <a href="{% url 'login' %}" class=" btn btn-success ">Log In</a>
-        
-        <a href="{% url 'signup' %}" class="btn btn-success">Sign Up</a>
+        <a href="{% url 'login' %}" class=" btn btn-success" >Log In</a>
+        <a href="{% url 'signup' %}" class="btn btn-success" >Sign Up</a>
       </div>
         {% endif %}
     </div>

@@ -1381,7 +1381,7 @@
     "pk": 11,
     "fields": {
         "title": "Harrison Building Solar Panels",
-        "content": "Visit the Harrison Building Solar Panels! The installation of 700 photovoltaic (PV) solar panels on the roof of the Harrison building reduces reliance on fossil fuels and moves the University towards clean, renewable energy. These panels will save 45,282 Kg of CO2 a year with an estimated output of 212,591 kWh a year.\r\n\r\nLocation: Harrison Hub",
+        "content": "Visit the Harrison Building Solar Panels! They help reduce the reliance on fossil fuels and reduce carbon emissions, leading the University towards clean and renewable energy.\r\n\r\nLocation: Harrison Hub",
         "points": 25,
         "cType": "Location-Based",
         "location": "SRID=4326;POINT (-3.532946542481416 50.73747152778568)",

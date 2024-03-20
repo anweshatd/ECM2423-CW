@@ -56,7 +56,7 @@
   <span style="--i:5"><h1>E</h1></span>
   <span style="--i:6"><h1>R</h1></span>
   <span style="--i:7"><h1>B</h1></span>
-  <span style="--i:8"><h1>0</h1></span>
+  <span style="--i:8"><h1>O</h1></span>
   <span style="--i:9"><h1>A</h1></span>
   <span style="--i:10"><h1>R</h1></span>
   <span style="--i:11"><h1>D</h1></span>
@@ -75,5 +75,6 @@
 {%endfor%}
 </table>
 </div>
-<h1 align='center'><a href="{% url 'home' %}">Home</a></h1>
+
+<h1 style="text-decoration: none; text-align:center;"><a href="{% url 'home' %}" class="btn btn-outline-success btn-lg">Home</a></h1>
 {% endblock %}

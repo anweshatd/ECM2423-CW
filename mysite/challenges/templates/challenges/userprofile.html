@@ -26,7 +26,7 @@
 {% if user.is_authenticated %}
 <body>
   <div style="margin-top: 6vh;"></div>
-    <h2>Hello {{user.username}}. These are the challenges you've completed. <br>
+    <h2>Hello {{user.username}}! These are the challenges you've completed. <br>
     You have {{player.points}} points.</h2>
 
       <div class="container text-center">
@@ -43,8 +43,8 @@
       </div>
       <br>
     
-        <a href="{% url 'challenges-home' %}"><h3 style="text-align:center;">See all challenges</h3></a>
-        <h3 align='center'><a href="{% url 'home' %}">Home</a></h3>
+        <a href="{% url 'challenges-home' %}" style="text-decoration: none;" class="link-success link-offset-2 link-underline-opacity-100-hover"><h3 style="text-align:center;">See all challenges</h3></a>
+        <h3 style="text-align:center;"><a href="{% url 'home' %}" class="btn btn-outline-success btn-lg">Home</a></h3>
 </body>
 
 
