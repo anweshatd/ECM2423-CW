@@ -85,7 +85,7 @@
 
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Profile</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body fade-in" style="display:inline-block;">
@@ -113,6 +113,10 @@
       <div onclick= " location.href = '{% url 'leaderboard' %}' " class="challenge_body">
         <h2>Leaderboard</h2>
       </div>
+      To see all your campus animal collection, click here
+      <div onclick="window.open('{% url 'foxCollection' %}')" class="challenge_body">
+        Fox/Badger/Duck Collection
+      </div>
 
       You have completed --- challenges. To see all the challenges you have completed. Click here
       <div onclick="location.href = '{% url 'userProfile' %}' " class="challenge_body">
@@ -125,10 +129,7 @@
       </form>
       </div>
 
-      To see all your campus animal collection, click here
-      <div onclick="window.open('{% url 'foxCollection' %}')" class="challenge_body">
-        Fox/Badger/Duck Collection
-      </div>
+
 
 
 
