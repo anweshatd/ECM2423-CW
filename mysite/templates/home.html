@@ -105,29 +105,29 @@
         {% endif %}
         <br>
         <br>
-        Would you like to complete more challenges to get more points? If so, click the challenges button right now to continue on your journey.
       </h2>
+       <h3> Would you like to complete more challenges to get more points? If so, click the challenges button right now to continue on your journey.</h3>
       </div>
 
       <div onclick=" location.href = '{% url 'challenges-home' %}' " class="challenge_body">
         <h2>Challenge</h2>
       </div>
-      To view the Leaderboard, click this button.
+      <h3>To view the Leaderboard, click this button. </h3>
       <div onclick= " location.href = '{% url 'leaderboard' %}' " class="challenge_body">
         <h2>Leaderboard</h2>
       </div>
 
-      To see your campus animal picture collection, click here
-      <div onclick="window.open('{% url 'foxCollection' %}')" class="challenge_body" style="text-align: center;">
+      <h3>To see your campus animal picture collection, click here</h3>
+      <div onclick=" location.href = '{% url 'foxCollection' %}' " class="challenge_body" style="text-align: center;">
         Fox/Badger/Duck/Napoleon Collection
       </div>
 
-      To logout, click here
-      <div onclick="window.open('{% url 'logout' %}')" class="challenge_body" style="text-align: center;">
+     <h3>To logout, click here</h3>
+      <div onclick="location.href = '{% url 'logout' %}'" class="challenge_body" style="text-align: center;">
         Logout
       </div>
 
-      You have completed --- challenges. To see all the challenges you have completed. Click here
+      <h3>You have completed --- challenges. To see all the challenges you have completed. Click here. </h3>
       <div onclick="location.href = '{% url 'userProfile' %}' " class="challenge_body">
        <h2>See your challenges</h2>
       </div>
