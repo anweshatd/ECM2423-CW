@@ -1294,34 +1294,10 @@
 },
 {
     "model": "challenges.challenge",
-    "pk": 1,
-    "fields": {
-        "title": "Geo Challenge",
-        "content": "Location-based challenge",
-        "points": 20,
-        "cType": "Location-Based",
-        "location": "SRID=4326;POINT (-3.52318698387381 50.711163406238825)",
-        "badge": "0"
-    }
-},
-{
-    "model": "challenges.challenge",
-    "pk": 2,
-    "fields": {
-        "title": "Non-geo Challenge",
-        "content": "Non location-based challenge",
-        "points": 10,
-        "cType": "Non Location-Based",
-        "location": "SRID=4326;POINT (5.039723276684127 46.9984875565575)",
-        "badge": "0"
-    }
-},
-{
-    "model": "challenges.challenge",
     "pk": 3,
     "fields": {
-        "title": "Spot a Fox/Badger/Duck",
-        "content": "Take a picture anytime you spot a fox, a badger or a duck!",
+        "title": "Spot a Fox/Badger/Duck or Napoleon!",
+        "content": "Take a picture anytime you spot a fox, a badger, a duck or even campus celebrity - Napoleon!",
         "points": 30,
         "cType": "Non Location-Based",
         "location": null,
