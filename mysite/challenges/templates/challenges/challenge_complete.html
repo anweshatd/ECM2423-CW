@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "./base.html" %}
 
 <head>
     <title> {% block title %}Challenge {{challenge.id}} Complete!{% endblock %} </title>
@@ -6,16 +6,18 @@
 
 
 {% block content %}
-<body>
-    <p>You have completed the challenge '{{challenge.title}}' and earned {{challenge.points}} points. Well done!</p>
+<bod class="container text-center">
+    <div style="margin-top:35vh;font-size: 8vh;"class="alert alert-success" role="alert">
+    <h1>You have completed the challenge '{{challenge.title}}' and earned {{challenge.points}} points. Well done!</h1>
 
     {% if challenge.badge != 0 %}
 
-    <p>You earned the badge {{challenge.badge}}!</p>
+    <h1>You earned the badge {{challenge.badge}}!</h1>
 
     {% endif %}
+    </div>  
     
-    <a href="{% url 'challenges-home' %}">See all challenges</a>
-    <p><a href="{% url 'home' %}">Home</a></p>
+    <h1><a href="{% url 'challenges-home' %}">See all challenges</a></h1>
+    <h1><a href="{% url 'home' %}">Home</a></h1>
 </body>
 {% endblock %}

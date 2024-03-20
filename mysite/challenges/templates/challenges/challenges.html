@@ -28,7 +28,7 @@
  <body class="p-3 mb-2 bg-light text-dark" >  
  <ol>
      {%for challenge in challenges%}
-     <div onclick='window.open("/challenges/{{challenge.id}}/")' class = "challenge_body" >
+     <div onclick='location.href = "/challenges/{{challenge.id}}/" ' class = "challenge_body" >
         <div class="container text-center">
              <div class="row"> 
                <div class="col-8">
@@ -61,6 +61,7 @@
 
     
     <p style='text-align:center;'><a href="{% url 'home' %}">Home</a></p>
+
   </body>
 
   <script>

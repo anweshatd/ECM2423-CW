@@ -3,7 +3,19 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<h2>Sign up</h2>
+<head>
+  <style>
+    body{
+      font-size:xx-large;
+    }
+    #id_username_helptext,#id_password1_helptext,#id_password2_helptext{
+      font-size: large;
+      font-weight: lighter;
+    }
+  </style>
+</head>
+<h1 class="text-center display-3">Sign up</h2>
+<div class="container-xl bg-secondary-subtle border border-success p-2 mb-2 border-opacity-100" >
 <form method="post">
   {% csrf_token %}
   {{ form }}
