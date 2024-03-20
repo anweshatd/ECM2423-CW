@@ -16,18 +16,27 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def challengesHome(request):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     context = {
         'challenges': challenge.objects.all()
     }
     return render(request, "challenges/challenges.html", context)
 
 def challengesWithLocation(request):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     context = {
         'challenges': challenge.objects.all()
     }
     return render(request, "challenges/individualchallenge.html", context)
 
 def userProfile(request):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     current_user = request.user
     current_player = Player.objects.get(pk=current_user.id)
     context = {
@@ -37,18 +46,27 @@ def userProfile(request):
     return render(request,"challenges/userprofile.html",context)
 
 def leaderboard(request):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     context = {
         'Players': Player.objects.all().order_by('-points')
     }
     return render(request, "challenges/leaderboard.html", context)
 
 def fox(request):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     context = {
         'challenges': challenge.objects.all()
     }
     return render(request, "challenges/fox.html", context)
 
 def foxCollection(request):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     context = {
         'challenges': challenge.objects.all()
     }
@@ -89,6 +107,9 @@ def user_location(request):
 
 
 def challengeIndi(request, challenge_id):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     current_user = request.user
     context = {
         'challenge': challenge.objects.get(pk=challenge_id),
@@ -136,6 +157,9 @@ def challengeIndi(request, challenge_id):
   
 
 def badges(request):
+    current_user = request.user
+    if (not(current_user.is_authenticated)):
+        return render(request, "home.html")
     return render(request, "challenges/badges.html")
 
 
