@@ -20,10 +20,45 @@
             padding-top:140px;
         }
 
-        .container
+        .h1
         {
-            
+            /* display:inline; */
+            position: relative;
+            z-index: -1;
+            /* overflow: hidden; */
         }
+
+        .gifs img.badger
+        {
+            padding-top: -25px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* .heading img.duck
+        {
+            position: absolute;
+            animation: move 5s linear infinite alternate;
+        }
+
+        @keyframes move 
+        {
+            0% {left: -100%; transform: scaleX(1)}
+            100% {left: 100%; transform: scaleX(-1)}
+        }
+
+        .heading img.badger
+        {
+            position: absolute;
+            animation: move2 5s linear infinite alternate;
+            transform: rotateX(180deg);
+        }
+
+        @keyframes move2 
+        {
+            0% {left: -100%; transform: scaleX(1)}
+            100% {left: 100%; transform: scaleX(-1)}
+        } */
 
     </style>
 
@@ -31,19 +66,13 @@
 
 <body>
     <h1 style="padding-top:80px;">Take a Picture of a Fox/Badger/Duck or Napoleon!</h1>
-    <img src="https://i.gifer.com/3IsJ.gif" style="width:70px;">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDRpb29mbnZkc2h3cGN0OHRhOG9wNnBmYmQzNDd0bjE0NWpkbGljeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dk1Txc1sDYEqLBAktj/giphy.gif" style="width:70px;">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXBwcDl4OGE1MmQ1Y3k0bWticzR3eGJ2amk5MHVlaG8wcGlpNzg1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/znU5gnJGdG05rWdXd3/giphy.gif" style="width:70px;">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2E2YnE3djI5YzZjY210eXlqazFrNHFlY3dyYXkwNGRocDJzdHRoaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1URHggWuPGvGaep3K7/giphy.gif" style="width:70px;">
-
-    <!-- <div id="camera">
-      <select id="cameraSelect"></select>
-      <video id="video" width="640" height="480" autoplay></video>
-      <button id="snap">Take Photo</button>
+    <div class = gifs>
+        <img src="https://i.gifer.com/3IsJ.gif" style="width:70px; float: left;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDRpb29mbnZkc2h3cGN0OHRhOG9wNnBmYmQzNDd0bjE0NWpkbGljeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dk1Txc1sDYEqLBAktj/giphy.gif" class="badger" style="width:70px;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXBwcDl4OGE1MmQ1Y3k0bWticzR3eGJ2amk5MHVlaG8wcGlpNzg1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/znU5gnJGdG05rWdXd3/giphy.gif" class="duck"style="width:70px;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2E2YnE3djI5YzZjY210eXlqazFrNHFlY3dyYXkwNGRocDJzdHRoaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1URHggWuPGvGaep3K7/giphy.gif" class="napoleon" style="width:70px; float: right;">
     </div>
-  
-    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas> -->
-
+    
     <div class = imageCapture>
         <label for="environment">Take a picture(back camera)</label>
         <br>
