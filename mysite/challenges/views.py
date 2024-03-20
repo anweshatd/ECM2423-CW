@@ -5,6 +5,7 @@ from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import challenge, userschallenges
+from .forms import ImageForm
 from accounts.models import Player
 import datetime
 
@@ -16,6 +17,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def challengesHome(request):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
@@ -25,6 +27,7 @@ def challengesHome(request):
     return render(request, "challenges/challenges.html", context)
 
 def challengesWithLocation(request):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
@@ -34,6 +37,7 @@ def challengesWithLocation(request):
     return render(request, "challenges/individualchallenge.html", context)
 
 def userProfile(request):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
@@ -46,15 +50,17 @@ def userProfile(request):
     return render(request,"challenges/userprofile.html",context)
 
 def leaderboard(request):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
     context = {
-        'Players': Player.objects.all().order_by('-points')
+        'Players': Player.objects.all().order_by('-points') #order players by points
     }
     return render(request, "challenges/leaderboard.html", context)
 
 def fox(request):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
@@ -64,6 +70,7 @@ def fox(request):
     return render(request, "challenges/fox.html", context)
 
 def foxCollection(request):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
@@ -71,8 +78,8 @@ def foxCollection(request):
         'challenges': challenge.objects.all()
     }
     path = settings.MEDIA_ROOT
-    img_list = os.listdir(path + "/images/")
-    context = {"images": img_list}
+    img_list = os.listdir(path + "/images/") 
+    context = {"images": img_list}#alphabetical order
     return render (request, 'challenges/foxCollection.html', context)
 
 
@@ -107,6 +114,7 @@ def user_location(request):
 
 
 def challengeIndi(request, challenge_id):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
@@ -125,10 +133,10 @@ def challengeIndi(request, challenge_id):
             context.update({'complete': True})
         except userschallenges.DoesNotExist:
             uc = None
+        #if accessing fox challenge
         if ((current_user.is_authenticated) and (challenge_id == 3)):
             if request.method == 'POST':
                 form = ImageForm(request.POST, request.FILES)
- 
                 if form.is_valid():
                     form.save()
                     return redirect('foxCollection')
@@ -136,16 +144,16 @@ def challengeIndi(request, challenge_id):
                 form = ImageForm()
             return render(request, "challenges/fox.html",{'form': form})
         
-        if (request.method == "POST"):
+        if (request.method == "POST"): #if submitting form
             if uc:  #check if user has already completed challenge
                 return HttpResponse("You have already completed this challenge")
             #update user points
             current_player.points += context['challenge'].points
             current_player.numChallenges = current_player.numChallenges + 1
-            #update badge maybe
+            #update badges
             if (context['challenge'].badge != '0'):
                 current_player.badges = current_player.badges + context['challenge'].badge
-                if (current_player.badges == 0):
+                if (current_player.badges == '0'):
                     current_player.badges = context['challenge'].badge
             current_player.save()
             #add to user-challenge database
@@ -157,6 +165,7 @@ def challengeIndi(request, challenge_id):
   
 
 def badges(request):
+    #check user has permission to access page
     current_user = request.user
     if (not(current_user.is_authenticated)):
         return render(request, "home.html")
@@ -167,18 +176,3 @@ from django.shortcuts import render, redirect
 from .forms import ImageForm
 from .forms import ImageForm
 
-def fox_image_view(request):
- 
-    if request.method == 'POST':
-        form = ImageForm(request.POST, request.FILES)
- 
-        if form.is_valid():
-            form.save()
-            return redirect('success')
-    else:
-        form = ImageForm()
-    return render(request, 'hotel_image_form.html', {'form': form})
- 
- 
-def success(request):
-    return HttpResponse('successfully uploaded')
