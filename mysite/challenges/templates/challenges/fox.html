@@ -20,9 +20,44 @@
             padding-top:140px;
         }
 
-        .container
+        .gifs {
+            position: relative;
+        }
+
+        .gifs img {
+            width: 70px;
+            position: absolute;
+        }
+
+        .gifs .fox {
+            left: 628px;
+        }
+
+        .gifs .badger 
         {
-            
+            position: absolute;
+            top: 78px;
+            transform: rotate(180deg);
+            transform: scaleY(-1);
+            animation: moveBadger 4s linear infinite alternate;
+        }
+
+        @keyframes moveBadger 
+        {
+            0% {left: 1000px;}
+            100% {left: 300px;}
+        }
+
+        .gifs .duck {
+            right: 235px;
+            top: 37px;
+            transform: scaleX(-1);
+        }
+
+        .gifs .napoleon
+        {
+            transform: rotate(90deg);
+            left: 331px;
         }
 
     </style>
@@ -30,28 +65,27 @@
 </head>
 
 <body>
-    <h1 style="padding-top:80px;">Take a Picture of a Fox/Badger/Duck or Napoleon!</h1>
-    <img src="https://i.gifer.com/3IsJ.gif" style="width:70px;">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDRpb29mbnZkc2h3cGN0OHRhOG9wNnBmYmQzNDd0bjE0NWpkbGljeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dk1Txc1sDYEqLBAktj/giphy.gif" style="width:70px;">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXBwcDl4OGE1MmQ1Y3k0bWticzR3eGJ2amk5MHVlaG8wcGlpNzg1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/znU5gnJGdG05rWdXd3/giphy.gif" style="width:70px;">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2E2YnE3djI5YzZjY210eXlqazFrNHFlY3dyYXkwNGRocDJzdHRoaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1URHggWuPGvGaep3K7/giphy.gif" style="width:70px;">
-
-
-
-    <!-- <div id="camera">
-      <select id="cameraSelect"></select>
-      <video id="video" width="640" height="480" autoplay></video>
-      <button id="snap">Take Photo</button>
+    <div class = gifs>
+        <img src="https://i.gifer.com/3IsJ.gif" class="fox" style="width:70px; ">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDRpb29mbnZkc2h3cGN0OHRhOG9wNnBmYmQzNDd0bjE0NWpkbGljeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dk1Txc1sDYEqLBAktj/giphy.gif" class="badger" style="width:70px;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXBwcDl4OGE1MmQ1Y3k0bWticzR3eGJ2amk5MHVlaG8wcGlpNzg1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/znU5gnJGdG05rWdXd3/giphy.gif" class="duck"style="width:70px;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2E2YnE3djI5YzZjY210eXlqazFrNHFlY3dyYXkwNGRocDJzdHRoaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1URHggWuPGvGaep3K7/giphy.gif" class="napoleon" style="width:70px;">
     </div>
-  
-    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas> -->
+    <h1 style="padding-top:50px;">Take a Picture of a Fox/Badger/Duck or Napoleon!</h1>
+
 
     
     <div class="container">
-        <form method = "post" enctype="multipart/form-data">
+        <form method = "post" enctype="multipart/form-data" style="padding-top: 100px; ">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Upload</button>
+            <div class="form-group" style="padding-left:500px;">
+                {{ form.title }}
+            </div>
+            <div class="form-group" style="padding-top:40px; padding-left:35px;">
+                {{ form.image }}
+            </div>
+            <!-- {{ form.as_p }} -->
+           <p style="padding-top:20px; padding-right:40px;"><button type="submit" class="btn btn-success">Upload</button></p> 
         </form>
         
       
@@ -59,7 +93,7 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
    
-   <p><a href="{% url 'home' %}" style="text-decoration: none;">Home</a></p>
+   <p style="padding-right:40px;"><a href="{% url 'home' %}" style="text-decoration: none;" class="btn btn-outline-success">Home</a></p>
 
 </body>
 
