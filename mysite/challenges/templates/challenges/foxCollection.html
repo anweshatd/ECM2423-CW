@@ -52,30 +52,10 @@
     foxImage.src = imageData;
   </script> -->
 
-  <script>
-    // Check if there's an image already stored in localStorage
-    const existingImage = localStorage.getItem('foxImage');
+  {% for image in images %}
+   <p>{{image}}</p>
+    <img  src="/images/images/{{image}}">
+    {% endfor %}
 
-    // If no existing image, store the new one
-    if (!existingImage) {
-        const newImage = localStorage.getItem('newFoxImage');
-        if (newImage) {
-            localStorage.setItem('foxImage', newImage);
-        }
-    }
-
-    // Display the uploaded image
-    const uploadedImage = localStorage.getItem('foxImage');
-    if (uploadedImage) {
-        const uploadedImageElement = document.createElement('img');
-        uploadedImageElement.src = uploadedImage;
-      
-        
-        uploadedImageElement.alt = 'Uploaded Fox';
-        uploadedImageElement.classList.add('uploadedImage');
-        uploadedImageElement.classList.add('img-thumbnail');
-        document.getElementById('foxImageContainer').appendChild(uploadedImageElement);
-    }
-</script>
 
 </html>
