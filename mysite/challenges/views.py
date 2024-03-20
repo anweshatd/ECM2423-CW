@@ -93,6 +93,7 @@ def challengeIndi(request, challenge_id):
         current_player = Player.objects.get(pk=current_user.id)
         try:
             uc = userschallenges.objects.get(user=current_player,challenge=context['challenge'])
+            
             context.update({'complete': True})
         except userschallenges.DoesNotExist:
             uc = None
@@ -101,6 +102,7 @@ def challengeIndi(request, challenge_id):
                 return HttpResponse("You have already completed this challenge")
             #update user points
             current_player.points += context['challenge'].points
+            current_player.numChallenges = current_player.numChallenges + 1
             #update badge maybe
             if (context['challenge'].badge != '0'):
                 current_player.badges = current_player.badges + context['challenge'].badge
