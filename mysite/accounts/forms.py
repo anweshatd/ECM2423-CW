@@ -10,6 +10,7 @@ class UserCreationForm(UserCreationForm):
         model = User
         fields = ("username", "email", "password1", "password2") #for ordering
 
+    #saving and adding to database
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
         user.email = self.cleaned_data["email"]

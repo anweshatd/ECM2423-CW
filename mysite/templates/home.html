@@ -128,6 +128,7 @@
        <h2 style="text-align: center;">See your challenges</h2>
       </div>
       <br>
+
       <p style="text-decoration:none;"><a href="{% url 'password_change' %}" class="btn btn-outline-success btn-lg">Password Change</a></p>
       <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}

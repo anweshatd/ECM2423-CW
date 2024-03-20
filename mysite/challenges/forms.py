@@ -1,5 +1,6 @@
 from django import forms
 from .models import Image
+from challenges.models import Image
 from django.forms import TextInput, FileInput
 
 class ImageForm(forms.ModelForm):
