@@ -1297,7 +1297,7 @@
     "pk": 3,
     "fields": {
         "title": "Spot a Fox/Badger/Duck or Napoleon!",
-        "content": "Take a picture anytime you spot a fox, a badger, a duck or even campus celebrity - Napoleon!",
+        "content": "Take a picture anytime you spot a fox, a badger, a duck or even the campus celebrity - Napoleon!",
         "points": 30,
         "cType": "Non Location-Based",
         "location": null,
@@ -1333,7 +1333,7 @@
     "pk": 7,
     "fields": {
         "title": "Make a Pledge to Prevent Food Waste",
-        "content": "Commit to reducing your food waste. Don't throw away food just becuase it's past it's sell by date!",
+        "content": "Commit to reducing your food waste. Don't throw away food just becuase it's past its sell by date!",
         "points": 20,
         "cType": "Non Location-Based",
         "location": null,
@@ -1357,7 +1357,7 @@
     "pk": 9,
     "fields": {
         "title": "Use a Sustainable Mode of Transport for Your Next Trip to Campus",
-        "content": "pt for walking, cycling, public transport, or car-sharing to reduce your carbon footprint.",
+        "content": "Opt for walking, cycling, public transport, or car-sharing to reduce your carbon footprint.",
         "points": 20,
         "cType": "Non Location-Based",
         "location": null,
@@ -1417,7 +1417,7 @@
     "pk": 14,
     "fields": {
         "title": "Save energy by turning the Thermostat down",
-        "content": "Turn your thermostat down and put on a extra layer instead to reduce you heating bill, save energy and save the planet! A smart thermostat will tell you how much energy you have saved!",
+        "content": "Turn your thermostat down and put on a extra layer instead to reduce your heating bill, save energy and save the planet! A smart thermostat will tell you how much energy you have saved!",
         "points": 5,
         "cType": "Non Location-Based",
         "location": null,
@@ -1489,7 +1489,7 @@
     "pk": 20,
     "fields": {
         "title": "Share Masale with friends!",
-        "content": "Encourage your loved ones to be sustainable by getting them to sign up to Masale! The more people who make sustainable choices the greater the effect.",
+        "content": "Encourage your loved ones to be sustainable by getting them to sign up to Masale! The more people who make sustainable choices, the greater the effect.",
         "points": 5,
         "cType": "Non Location-Based",
         "location": null,
@@ -1512,8 +1512,8 @@
     "model": "challenges.challenge",
     "pk": 22,
     "fields": {
-        "title": "Use To Good To Go",
-        "content": "To Good To Go is an app that allows you to buy surplus food from local businesses for a cheaper price! Help reduce food waste by getting a magic bag from the Market Place Forum Shop!\r\n\r\nLocation: Market Place Forum",
+        "title": "Use Too Good To Go",
+        "content": "Too Good To Go is an app that allows you to buy surplus food from local businesses for a cheaper price! Help reduce food waste by getting a magic bag from the Market Place Forum Shop!\r\n\r\nLocation: Market Place Forum",
         "points": 25,
         "cType": "Location-Based",
         "location": "SRID=4326;POINT (-3.533822629077604 50.73521639620771)",
@@ -1537,7 +1537,7 @@
     "pk": 24,
     "fields": {
         "title": "Mend your clothes",
-        "content": "Instead of throwing away your clothes next time they get a hole, try darning it.",
+        "content": "Instead of throwing away your clothes next time they get a hole, try darning them.",
         "points": 20,
         "cType": "Non Location-Based",
         "location": null,
