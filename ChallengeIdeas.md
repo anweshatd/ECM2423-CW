@@ -25,7 +25,7 @@
   - Electric vehicle (EV) charging stations support sustainable transportation by encouraging the use of electric vehicles. This initiative aligns with the University of Exeter's sustainability goals by reducing the carbon footprint associated with campus transportation, contributing towards the university's aim for a carbon net-zero impact by 2030.
  
 ### References:
-- https://www.exeter.ac.uk/about/sustainability/whatwearedoing/
+- https://www.exeter.ac.uk/about/sustainability/
 - https://exeter.greenrewards.co.uk/
 - https://news-archive.exeter.ac.uk/homepage/title_933688_en.html
 
