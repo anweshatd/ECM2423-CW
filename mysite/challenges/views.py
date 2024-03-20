@@ -1,3 +1,5 @@
+# @author Lucas and Alex
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import challenge, userschallenges
