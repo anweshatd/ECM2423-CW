@@ -93,14 +93,17 @@
        <h2> Hello, {{ user.username }}! 
         <br>
         Welcome back to the Exeter Eco-Expedition! It's great to have you back! 
+        <br> 
         <br>
         You currently have {{ player.points }} points. 
+        <br>
         <br>
         {%  if player.badges != '0' %}
         You currently have these badges: {{player.badges}}
         {% else %}
         You don't currently have any badges. Try completing more challenges to earn them!
         {% endif %}
+        <br>
         <br>
         Would you like to complete more challenges to get more points? If so, click the challenges button right now to continue on your journey.
       </h2>
@@ -127,40 +130,15 @@
         {% csrf_token %}
         <button type="submit" class="btn btn-success">Log Out</button>
       </form>
-      </div>
-
-
-
-
-
-  <div style="display:none">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'leaderboard' %}">Leaderboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'challenges-home' %}">Challenges</a>
-          </li>
-        </ul>
-
+    </div>
   
       </div>
-    </div>
-  </nav>
+
+      
   
 
   <div class="welcome">
-    <h1>Hello, {{ user.username }}! You are at the Masale Homepage.</h1>
+   <!-- <h1>Hello, {{ user.username }}! You are at the Masale Homepage.</h1> -->
     
     <!-- <p><a href="{% url 'leaderboard' %}">Leaderboard</a></p>
     <p><a href="{% url 'challenges-home' %}">See all Challenges</a></p> -->
