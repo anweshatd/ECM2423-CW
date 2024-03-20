@@ -13,8 +13,6 @@ class SignUp(CreateView):
     template_name = "registration/signup.html"
 '''
 
-#need to fix
-
 def SignUp(request):
     if request.method == 'POST':
         signupForm = UserCreationForm(request.POST)

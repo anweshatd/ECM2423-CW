@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
-
+{% load static%}
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
@@ -14,9 +14,9 @@
     }
 
     .pushable {
-  background: hsl(340deg 100% 40%);
+  background: hsl(58, 98%, 33%);
   border: none;
-  border-radius: 50%;
+  border-radius: 70%;
   padding: 0;
   cursor: pointer;
   margin-left:20vw;
@@ -30,10 +30,10 @@
   border-radius: 50%;
   font-size: 1.25rem;
   text-align: center;
-  padding-top: 40%;
-  background: hsl(345deg 100% 47%);
+  padding-top: 0%;
+  background: hsl(58, 100%, 51%);
   color: white;
-  transform: translateY(-4px);
+  transform: translateY(-16px) translateX(-4px);
 }
 
 .pushable:focus:not(:focus-visible) {
@@ -43,6 +43,7 @@
       will-change: transform;
       transition: transform 250ms;
     }
+
 #button-text{
       text-align: center;
       margin-top: 60vh;
@@ -75,11 +76,11 @@
   </style>
 </head>
 <body>
-
-
+  
   <button class="pushable fade-in-faster" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
     <span class="front">
-      <h1 style="animation: fill-in 4s forwards"id="button text">Push me</h1>
+      <img style="animation: fill-in 4s forwards" src="/images/masale2.png" class="img-fluid" alt="...">
+     <!-- <h1 style="animation: fill-in 4s forwards"id="button text">Push me</h1>-->
     </span>
   </button>
 
@@ -110,31 +111,28 @@
       </div>
 
       <div onclick=" location.href = '{% url 'challenges-home' %}' " class="challenge_body">
-        <h2>Challenge</h2>
+        <h2 style="text-align: center;">Challenge</h2>
       </div>
-      <h3>To view the Leaderboard, click this button. </h3>
+      <h3>To view the Leaderboard, click here. </h3>
       <div onclick= " location.href = '{% url 'leaderboard' %}' " class="challenge_body">
-        <h2>Leaderboard</h2>
+        <h2 style="text-align: center;">Leaderboard</h2>
       </div>
 
-      <h3>To see your campus animal picture collection, click here</h3>
+      <h3>To see your campus animal picture collection, click here.</h3>
       <div onclick=" location.href = '{% url 'foxCollection' %}' " class="challenge_body" style="text-align: center;">
-        Fox/Badger/Duck/Napoleon Collection
+        <div style="text-align: center;">Fox/Badger/Duck/Napoleon Collection</div>
       </div>
 
-     <h3>To logout, click here</h3>
-      <div onclick="location.href = '{% url 'logout' %}'" class="challenge_body" style="text-align: center;">
-        Logout
-      </div>
-
-      <h3>You have completed --- challenges. To see all the challenges you have completed. Click here. </h3>
+      <h3>You have completed {{player.numChallenges}} challenge(s). To see all the challenges you have completed, click here. </h3>
       <div onclick="location.href = '{% url 'userProfile' %}' " class="challenge_body">
-       <h2>See your challenges</h2>
+       <h2 style="text-align: center;">See your challenges</h2>
       </div>
-      <p><a href="{% url 'password_change' %}">Password Change</a></p>
+      <br>
+
+      <p style="text-decoration:none;"><a href="{% url 'password_change' %}" class="btn btn-outline-success btn-lg">Password Change</a></p>
       <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}
-        <button type="submit" class="btn btn-success">Log Out</button>
+        <button type="submit" class="btn btn-outline-success btn-lg">Log Out</button>
       </form>
     </div>
   
@@ -154,11 +152,10 @@
       
     {% else %}
     <div class="position-absolute top-50">
-      <h1 class="display-1 text-center alert alert-danger" role="alert">You are not logged in</h1>
+      <h1 class="display-1 text-center alert alert-danger" role="alert">You are not logged in!</h1>
       <div style="margin-left:30vw;" class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-        <a href="{% url 'login' %}" class=" btn btn-success ">Log In</a>
-        
-        <a href="{% url 'signup' %}" class="btn btn-success">Sign Up</a>
+        <a href="{% url 'login' %}" class=" btn btn-success" >Log In</a>
+        <a href="{% url 'signup' %}" class="btn btn-success" >Sign Up</a>
       </div>
         {% endif %}
     </div>

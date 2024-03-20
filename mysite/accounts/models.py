@@ -7,15 +7,8 @@ class Player(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     points = models.IntegerField()
     badges = models.CharField(max_length=50, default=0)
+    numChallenges = models.IntegerField() #number of challenges the user has completed
 
     def __str__(self):
         return self.user.username
 
-
-
-class GameKeeper(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-
-
-class Developer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)

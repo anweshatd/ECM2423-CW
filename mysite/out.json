@@ -1085,78 +1085,6 @@
     }
 },
 {
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$11e9UoTdgWNxSfqdzMMT5U$ZY74u0clN6IudiZuUYSH51mVBMxOSue/3WeNw0MBupw=",
-        "last_login": "2024-03-15T16:21:16.810Z",
-        "is_superuser": false,
-        "username": "carrot",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2024-03-15T16:21:07.317Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$88wjBQxSe4i9NE0jX05Psk$AbwEp70L5Q08TCaG2YzRLANgF0ayFSSF45WdxoSsuzA=",
-        "last_login": "2024-03-18T20:10:19.834Z",
-        "is_superuser": true,
-        "username": "sophiekw",
-        "first_name": "",
-        "last_name": "",
-        "email": "sw1006@exeter.ac.uk",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2024-03-15T16:21:57.610Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 3,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$gZWvpZclVfSKWO0dgDVr2x$fXVLpzYSxJ2gM60vjv7sUocCRuJvygQTT/tiofIOqYs=",
-        "last_login": "2024-03-19T13:24:21.670Z",
-        "is_superuser": false,
-        "username": "testman",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2024-03-19T13:24:14.457Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 4,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$UB2TftZVzc0DGBB5Tyl63R$NTpKRWzdT77QdPjt433s6Xv7BGHnR8C+28qGdO2+8xQ=",
-        "last_login": "2024-03-19T15:13:44.400Z",
-        "is_superuser": false,
-        "username": "apple",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2024-03-19T15:13:32.456Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
     "model": "contenttypes.contenttype",
     "pk": 1,
     "fields": {
@@ -1297,11 +1225,11 @@
     "pk": 3,
     "fields": {
         "title": "Spot a Fox/Badger/Duck or Napoleon!",
-        "content": "Take a picture anytime you spot a fox, a badger, a duck or even campus celebrity - Napoleon!",
+        "content": "Take a picture anytime you spot a fox, a badger, a duck or even the campus celebrity - Napoleon!",
         "points": 30,
         "cType": "Non Location-Based",
         "location": null,
-        "badge": "0"
+        "badge": "🦊"
     }
 },
 {
@@ -1333,7 +1261,7 @@
     "pk": 7,
     "fields": {
         "title": "Make a Pledge to Prevent Food Waste",
-        "content": "Commit to reducing your food waste. Don't throw away food just becuase it's past it's sell by date!",
+        "content": "Commit to reducing your food waste. Don't throw away food just becuase it's past its sell by date!",
         "points": 20,
         "cType": "Non Location-Based",
         "location": null,
@@ -1357,7 +1285,7 @@
     "pk": 9,
     "fields": {
         "title": "Use a Sustainable Mode of Transport for Your Next Trip to Campus",
-        "content": "pt for walking, cycling, public transport, or car-sharing to reduce your carbon footprint.",
+        "content": "Opt for walking, cycling, public transport, or car-sharing to reduce your carbon footprint.",
         "points": 20,
         "cType": "Non Location-Based",
         "location": null,
@@ -1381,7 +1309,7 @@
     "pk": 11,
     "fields": {
         "title": "Harrison Building Solar Panels",
-        "content": "Visit the Harrison Building Solar Panels! The installation of 700 photovoltaic (PV) solar panels on the roof of the Harrison building reduces reliance on fossil fuels and moves the University towards clean, renewable energy. These panels will save 45,282 Kg of CO2 a year with an estimated output of 212,591 kWh a year.\r\n\r\nLocation: Harrison Hub",
+        "content": "Visit the Harrison Building Solar Panels! They help reduce the reliance on fossil fuels and reduce carbon emissions, leading the University towards clean and renewable energy.\r\n\r\nLocation: Harrison Hub",
         "points": 25,
         "cType": "Location-Based",
         "location": "SRID=4326;POINT (-3.532946542481416 50.73747152778568)",
@@ -1417,7 +1345,7 @@
     "pk": 14,
     "fields": {
         "title": "Save energy by turning the Thermostat down",
-        "content": "Turn your thermostat down and put on a extra layer instead to reduce you heating bill, save energy and save the planet! A smart thermostat will tell you how much energy you have saved!",
+        "content": "Turn your thermostat down and put on a extra layer instead to reduce your heating bill, save energy and save the planet! A smart thermostat will tell you how much energy you have saved!",
         "points": 5,
         "cType": "Non Location-Based",
         "location": null,
@@ -1489,7 +1417,7 @@
     "pk": 20,
     "fields": {
         "title": "Share Masale with friends!",
-        "content": "Encourage your loved ones to be sustainable by getting them to sign up to Masale! The more people who make sustainable choices the greater the effect.",
+        "content": "Encourage your loved ones to be sustainable by getting them to sign up to Masale! The more people who make sustainable choices, the greater the effect.",
         "points": 5,
         "cType": "Non Location-Based",
         "location": null,
@@ -1512,8 +1440,8 @@
     "model": "challenges.challenge",
     "pk": 22,
     "fields": {
-        "title": "Use To Good To Go",
-        "content": "To Good To Go is an app that allows you to buy surplus food from local businesses for a cheaper price! Help reduce food waste by getting a magic bag from the Market Place Forum Shop!\r\n\r\nLocation: Market Place Forum",
+        "title": "Use Too Good To Go",
+        "content": "Too Good To Go is an app that allows you to buy surplus food from local businesses for a cheaper price! Help reduce food waste by getting a magic bag from the Market Place Forum Shop!\r\n\r\nLocation: Market Place Forum",
         "points": 25,
         "cType": "Location-Based",
         "location": "SRID=4326;POINT (-3.533822629077604 50.73521639620771)",
@@ -1537,7 +1465,7 @@
     "pk": 24,
     "fields": {
         "title": "Mend your clothes",
-        "content": "Instead of throwing away your clothes next time they get a hole, try darning it.",
+        "content": "Instead of throwing away your clothes next time they get a hole, try darning them.",
         "points": 20,
         "cType": "Non Location-Based",
         "location": null,

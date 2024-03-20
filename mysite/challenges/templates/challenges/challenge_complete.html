@@ -10,14 +10,14 @@
     <div style="margin-top:35vh;font-size: 8vh;"class="alert alert-success" role="alert">
     <h1>You have completed the challenge '{{challenge.title}}' and earned {{challenge.points}} points. Well done!</h1>
 
-    {% if challenge.badge != 0 %}
+    {% if challenge.badge != '0' %}
 
     <h1>You earned the badge {{challenge.badge}}!</h1>
 
     {% endif %}
     </div>  
-    
-    <h1><a href="{% url 'challenges-home' %}">See all challenges</a></h1>
-    <h1><a href="{% url 'home' %}">Home</a></h1>
+
+    <h1 style="text-decoration: none;"><a href="{% url 'challenges-home' %}" class="btn btn-outline-success btn-lg">See all challenges</a></h1>
+    <h1><a href="{% url 'home' %}" class="btn btn-outline-success btn-lg">Home</a></h1>
 </body>
 {% endblock %}

@@ -1,3 +1,5 @@
+# @author Lucas and Alex
+
 from django.db import models
 
 from accounts.models import Player
