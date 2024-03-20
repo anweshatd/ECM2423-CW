@@ -90,9 +90,9 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'postgres',
         'USER': 'postgres',
-        #'PASSWORD': 'groupsoft',
+        'PASSWORD': 'groupsoft',
         'HOST': 'localhost',
-        'PORT': '5435'
+        'PORT': '5432'
     }
 }
 
