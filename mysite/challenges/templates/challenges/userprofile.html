@@ -25,7 +25,9 @@
 {% block content %}
 {% if user.is_authenticated %}
 <body>
-    Hello {{user.username}}. These are the challenges you've completed. You have {{player.points}} points.
+  <div style="margin-top: 6vh;"></div>
+    <h2>Hello {{user.username}}. These are the challenges you've completed. <br>
+    You have {{player.points}} points.</h2>
 
       <div class="container text-center">
         <div style="margin-right:10vw;" class="row row-cols" >
@@ -39,13 +41,15 @@
             {%endfor%}
         </div>
       </div>
+      <br>
     
-        <a href="{% url 'challenges-home' %}">See all challenges</a>
+        <a href="{% url 'challenges-home' %}"><h3 style="text-align:center;">See all challenges</h3></a>
+        <h3 align='center'><a href="{% url 'home' %}">Home</a></h3>
 </body>
 
 
 {% else %}
-<p>You have not completed any challenges.</p>
+<h1>You have not completed any challenges.</h1>
 
 {% endif %}
 <script> // needs to be before the getlocation button
