@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
-
+{% load static%}
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
     .pushable {
   background: hsl(340deg 100% 40%);
   border: none;
-  border-radius: 50%;
+  border-radius: 70%;
   padding: 0;
   cursor: pointer;
   margin-left:20vw;
@@ -30,10 +30,10 @@
   border-radius: 50%;
   font-size: 1.25rem;
   text-align: center;
-  padding-top: 40%;
+  padding-top: 0%;
   background: hsl(345deg 100% 47%);
   color: white;
-  transform: translateY(-4px);
+  transform: translateY(-16px) translateX(-4px);
 }
 
 .pushable:focus:not(:focus-visible) {
@@ -43,6 +43,7 @@
       will-change: transform;
       transition: transform 250ms;
     }
+
 #button-text{
       text-align: center;
       margin-top: 60vh;
@@ -75,12 +76,11 @@
   </style>
 </head>
 <body>
-  <img src="mysite/templates/masale2.png" class="img-fluid" alt="...">
-  <img src="mysite/templates/masale2.png">
+  
   <button class="pushable fade-in-faster" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
     <span class="front">
-      <h1 style="animation: fill-in 4s forwards"id="button text">Push me</h1>
-      
+      <img style="animation: fill-in 4s forwards" src="/images/masale2.png" class="img-fluid" alt="...">
+     <!-- <h1 style="animation: fill-in 4s forwards"id="button text">Push me</h1>-->
     </span>
   </button>
 
