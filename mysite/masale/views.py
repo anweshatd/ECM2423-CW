@@ -9,10 +9,10 @@ def home(request):
         try:
             current_player = Player.objects.get(pk=current_user.id)
             context = {
-            'player': current_player
+            'player': current_player,
             }
         except Player.DoesNotExist:
-            newPlayer = Player(user=current_user,points=0)
+            newPlayer = Player(user=current_user,points=0,numChallenges=0)
             newPlayer.save() 
             context = {
             'player': newPlayer
