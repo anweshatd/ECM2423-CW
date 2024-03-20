@@ -62,19 +62,14 @@
             <!-- this is the offcanvas section-->
     
                 <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                 See Who Else Has Completed This Challenge
+                 See Who Else Has Completed Thius Challenge
                 </button>
               </p>
               <div class="collapse" id="collapseExample">
                 <div style="background-color:transparent;"class="card card-body">
-                {%if otherplayer%}
-                    {%for players in otherplayers %}
-                        <h1 style="color:lightgoldenrodyellow;">{{players.user}}</h1><br>
-                    {%endfor%} 
-                {%else%}
-                    <h1 style="color:lightgoldenrodyellow;">No One Has Completed The Challenge</h1>
-
-                {%endif}
+                {%for players in otherplayers %}
+                    <h1 style="color:lightgoldenrodyellow;">{{players.user}}</h1><br>
+                {%endfor%} 
                 </div>
               </div>
               <br>
