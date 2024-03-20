@@ -1,5 +1,3 @@
-# @author Lucas and Alex
-
 from django.db import models
 
 from accounts.models import Player
@@ -32,9 +30,3 @@ class userschallenges(models.Model):
     user = models.ForeignKey(Player, on_delete=models.CASCADE)
     challenge = models.ForeignKey(challenge, on_delete=models.CASCADE)
     date = models.DateField()
-
-class Image(models.Model):
-    title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images/')
-    def __str__(self):
-        return self.title

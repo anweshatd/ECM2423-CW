@@ -1,7 +1,3 @@
-# @author Lucas and Alex
-
-import os
-from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import challenge, userschallenges
@@ -52,10 +48,7 @@ def foxCollection(request):
     context = {
         'challenges': challenge.objects.all()
     }
-    path = settings.MEDIA_ROOT
-    img_list = os.listdir(path + "/images/")
-    context = {"images": img_list}
-    return render (request, 'challenges/foxCollection.html', context)
+    return render(request, "challenges/foxCollection.html", context)
 
 
 def verify_player_location(request):
@@ -104,17 +97,6 @@ def challengeIndi(request, challenge_id):
             context.update({'complete': True})
         except userschallenges.DoesNotExist:
             uc = None
-        if ((current_user.is_authenticated) and (challenge_id == 3)):
-            if request.method == 'POST':
-                form = ImageForm(request.POST, request.FILES)
- 
-                if form.is_valid():
-                    form.save()
-                    return redirect('foxCollection')
-            else:
-                form = ImageForm()
-            return render(request, "challenges/fox.html",{'form': form})
-        
         if (request.method == "POST"):
             if uc:  #check if user has already completed challenge
                 return HttpResponse("You have already completed this challenge")
@@ -132,29 +114,10 @@ def challengeIndi(request, challenge_id):
             link = userschallenges(user=current_player,challenge=context['challenge'],date=today)
             link.save() 
             return render(request, "challenges/challenge_complete.html",context)
+        if ((current_user.is_authenticated) and (challenge_id == 3)):
+            return render(request, "challenges/fox.html",context)
     return render(request, "challenges/challenge.html",context)
   
 
 def badges(request):
     return render(request, "challenges/badges.html")
-
-
-from django.shortcuts import render, redirect
-from .forms import ImageForm
-from .forms import ImageForm
-
-def fox_image_view(request):
- 
-    if request.method == 'POST':
-        form = ImageForm(request.POST, request.FILES)
- 
-        if form.is_valid():
-            form.save()
-            return redirect('success')
-    else:
-        form = ImageForm()
-    return render(request, 'hotel_image_form.html', {'form': form})
- 
- 
-def success(request):
-    return HttpResponse('successfully uploaded')

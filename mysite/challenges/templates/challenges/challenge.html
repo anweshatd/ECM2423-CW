@@ -67,15 +67,15 @@
               </p>
               <div class="collapse" id="collapseExample">
                 <div style="background-color:transparent;"class="card card-body">
-                {%if otherplayer%}
+                {%if otherplayers %}
                     {%for players in otherplayers %}
-                        <h1 style="color:lightgoldenrodyellow;">{{players.user}}</h1><br>
+                    <h1 style="color:lightgoldenrodyellow;">{{players.user}}</h1><br>
                     {%endfor%} 
+               
                 {%else%}
-                    <h1 style="color:lightgoldenrodyellow;">No One Has Completed The Challenge</h1>
-
-                {%endif}
-                </div>
+                    <h1 style="color:lightgoldenrodyellow;">No Other Players Have Completed The Challenge</h1>
+                {% endif %}
+            </div>
               </div>
               <br>
               <a href="{% url 'challenges-home' %}"><h1>See all challenges</h1></a>
