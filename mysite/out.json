@@ -1085,78 +1085,6 @@
     }
 },
 {
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$11e9UoTdgWNxSfqdzMMT5U$ZY74u0clN6IudiZuUYSH51mVBMxOSue/3WeNw0MBupw=",
-        "last_login": "2024-03-15T16:21:16.810Z",
-        "is_superuser": false,
-        "username": "carrot",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2024-03-15T16:21:07.317Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$88wjBQxSe4i9NE0jX05Psk$AbwEp70L5Q08TCaG2YzRLANgF0ayFSSF45WdxoSsuzA=",
-        "last_login": "2024-03-18T20:10:19.834Z",
-        "is_superuser": true,
-        "username": "sophiekw",
-        "first_name": "",
-        "last_name": "",
-        "email": "sw1006@exeter.ac.uk",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2024-03-15T16:21:57.610Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 3,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$gZWvpZclVfSKWO0dgDVr2x$fXVLpzYSxJ2gM60vjv7sUocCRuJvygQTT/tiofIOqYs=",
-        "last_login": "2024-03-19T13:24:21.670Z",
-        "is_superuser": false,
-        "username": "testman",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2024-03-19T13:24:14.457Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 4,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$UB2TftZVzc0DGBB5Tyl63R$NTpKRWzdT77QdPjt433s6Xv7BGHnR8C+28qGdO2+8xQ=",
-        "last_login": "2024-03-19T15:13:44.400Z",
-        "is_superuser": false,
-        "username": "apple",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2024-03-19T15:13:32.456Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
     "model": "contenttypes.contenttype",
     "pk": 1,
     "fields": {
@@ -1301,7 +1229,7 @@
         "points": 30,
         "cType": "Non Location-Based",
         "location": null,
-        "badge": "0"
+        "badge": "🦊"
     }
 },
 {
@@ -1381,7 +1309,7 @@
     "pk": 11,
     "fields": {
         "title": "Harrison Building Solar Panels",
-        "content": "Visit the Harrison Building Solar Panels! The installation of 700 photovoltaic (PV) solar panels on the roof of the Harrison building reduces reliance on fossil fuels and moves the University towards clean, renewable energy. These panels will save 45,282 Kg of CO2 a year with an estimated output of 212,591 kWh a year.\r\n\r\nLocation: Harrison Hub",
+        "content": "Visit the Harrison Building Solar Panels! They help reduce the reliance on fossil fuels and reduce carbon emissions, leading the University towards clean and renewable energy.\r\n\r\nLocation: Harrison Hub",
         "points": 25,
         "cType": "Location-Based",
         "location": "SRID=4326;POINT (-3.532946542481416 50.73747152778568)",
@@ -1650,114 +1578,6 @@
         "cType": "Non Location-Based",
         "location": null,
         "badge": "🦆"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 1,
-    "fields": {
-        "user": 1,
-        "challenge": 1,
-        "date": "2024-02-28"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 2,
-    "fields": {
-        "user": 1,
-        "challenge": 2,
-        "date": "2024-02-28"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 4,
-    "fields": {
-        "user": 2,
-        "challenge": 28,
-        "date": "2024-03-18"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 5,
-    "fields": {
-        "user": 2,
-        "challenge": 5,
-        "date": "2024-03-18"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 6,
-    "fields": {
-        "user": 2,
-        "challenge": 33,
-        "date": "2024-03-18"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 7,
-    "fields": {
-        "user": 2,
-        "challenge": 23,
-        "date": "2024-03-18"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 8,
-    "fields": {
-        "user": 2,
-        "challenge": 31,
-        "date": "2024-03-18"
-    }
-},
-{
-    "model": "challenges.userschallenges",
-    "pk": 9,
-    "fields": {
-        "user": 2,
-        "challenge": 10,
-        "date": "2024-03-18"
-    }
-},
-{
-    "model": "accounts.player",
-    "pk": 1,
-    "fields": {
-        "user": 1,
-        "points": 16,
-        "badges": "0"
-    }
-},
-{
-    "model": "accounts.player",
-    "pk": 2,
-    "fields": {
-        "user": 2,
-        "points": 80,
-        "badges": "☕️🦆🐝🌎🥑"
-    }
-},
-{
-    "model": "accounts.player",
-    "pk": 3,
-    "fields": {
-        "user": 3,
-        "points": 0,
-        "badges": "0"
-    }
-},
-{
-    "model": "accounts.player",
-    "pk": 4,
-    "fields": {
-        "user": 4,
-        "points": 0,
-        "badges": "0"
     }
 }
 ]
