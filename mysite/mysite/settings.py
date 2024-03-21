@@ -101,8 +101,7 @@ DATABASES = {
 #GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal308.dll"
 #GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
 #GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
-GDAL_LIBRARY_PATH = './home/linuxbrew/.linuxbrew/lib/libgdal.so'
-GEOS_LIBRARY_PATH = './home/linuxbrew/.linuxbrew/lib/libgeos.so'
+
 
 #GDAL_LIBRARY_PATH = r"C:\OSGeo4W\bin\gdal308.dll"
 
