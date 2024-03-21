@@ -158,5 +158,6 @@ MEDIA_ROOT =  os.path.join(BASE_DIR, 'images')
 MEDIA_URL = '/images/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'images')
-MEDIA_URL='/images/'import django_heroku
+MEDIA_URL='/images/'
+import django_heroku
 django_heroku.settings(locals())
